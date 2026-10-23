@@ -5,6 +5,7 @@ import { ChevronDown, Link2 } from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+import { AccountMenu } from "@/components/panel/AccountMenu";
 import { Wordmark } from "@/components/panel/Wordmark";
 import { IntentBox } from "@/components/panel/IntentBox";
 import { ModelInfo } from "@/components/panel/ModelInfo";
@@ -13,9 +14,10 @@ import { TopSpots } from "@/components/panel/TopSpots";
 import { TypeSelect } from "@/components/panel/TypeSelect";
 import type { BusinessTypeKey } from "@/lib/businessTypes";
 import { cn } from "@/lib/utils";
-import type { Business, ModelWeights, PlanResponse, ScoredHex } from "@/types";
+import type { Account, Business, ModelWeights, PlanResponse, ScoredHex } from "@/types";
 
 interface Props {
+  account: Account;
   business: Business;
   weights: ModelWeights;
   scored: ScoredHex[];
@@ -57,6 +59,7 @@ export function ControlPanel(props: Props) {
             <span className="ml-auto rounded-full bg-zinc-100 px-2 py-0.5 text-[11px] font-medium text-zinc-600">
               Pomona, CA
             </span>
+            <AccountMenu account={props.account} />
           </div>
           <p className="mt-1 text-sm text-zinc-500">A decision model for where to open your business.</p>
         </header>

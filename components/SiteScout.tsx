@@ -23,7 +23,7 @@ import type { BusinessTypeKey } from "@/lib/businessTypes";
 import { DEFAULT_WEIGHTS, scoreAll } from "@/lib/model";
 import { readUrlState, writeUrlState } from "@/lib/urlState";
 import { DEFAULT_VIEW, fitPoints, flyHome, flyTo } from "@/lib/viewport";
-import type { Business, ModelWeights, PlaceResult, ScoredHex } from "@/types";
+import type { Account, Business, ModelWeights, PlaceResult, ScoredHex } from "@/types";
 
 const HexMap = dynamic(() => import("./map/HexMap"), {
   ssr: false,
@@ -37,7 +37,7 @@ function initialView(hex: string | null, a: string | null, b: string | null): Ma
   return { ...DEFAULT_VIEW, latitude: lat, longitude: lng, zoom: 13 };
 }
 
-export default function SiteScout() {
+export default function SiteScout({ account }: { account: Account }) {
   const params = useSearchParams();
   const [init] = useState(() => readUrlState(new URLSearchParams(params.toString())));
 
@@ -221,6 +221,7 @@ export default function SiteScout() {
 
       <div className="pointer-events-none absolute inset-x-2 top-2 flex flex-col gap-2 md:contents">
         <ControlPanel
+          account={account}
           business={business}
           weights={weights}
           scored={scored}

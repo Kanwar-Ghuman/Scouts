@@ -8,6 +8,13 @@ export interface CustomSpec {
 }
 
 /** A preset (custom null) or a custom business (custom set). */
+/** The signed-in user, as shown in the account menu. */
+export interface Account {
+  name: string;
+  email: string;
+  businessName: string | null;
+}
+
 export interface Business {
   type: TypeKey;
   custom: CustomSpec | null;
