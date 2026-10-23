@@ -50,7 +50,8 @@ Next.js API routes (Snowflake via key-pair auth) → lib/model.ts scores in the 
 
 - **Snowflake:** the Marketplace dataset, geospatial (`ST_DWITHIN`) and H3 functions, and **Cortex `AI_COMPLETE`**, so the open-weight model runs inside Snowflake, next to the data.
 - **CoCo:** we used Snowflake CoCo (Cortex Code CLI) to explore the Overture Places data and its category strings and to build the pipeline SQL in [`sql/`](sql/).
-  <!-- TODO: add a CoCo screenshot, e.g. ![CoCo exploring Overture Places](docs/coco.png) -->
+
+  ![CoCo writing and running SQL on Overture Maps Places: the 15 most common categories within 12 km of Cal Poly Pomona](docs/coco.png)
 - **Reliability:** if Snowflake is unreachable the app serves exported data from [`data/`](data/). It retries dropped connections, rate-limits LLM routes (20 requests per minute per IP), and caches every LLM result.
 - **Accounts:** email and password (hashed with Node's built-in scrypt), with database-backed sessions in an httpOnly cookie. Tables `users` and `sessions` live in Neon. The map requires an account unless `MOCK_MODE=true`.
 
