@@ -8,7 +8,7 @@
 
 Built at Bronco MiniHacks 2026 by Kanwar Ghuman and Sirui Wang. Tracks: Local Businesses, Best Use of Snowflake, Best Open-Source AI Project.
 
-<!-- TODO: add an app screenshot here, e.g. ![Site Scout map](docs/screenshot.png) -->
+![Site Scout: a boba spot on the Cal Poly Pomona campus, with the score, the exact math, and Llama 3.3's explanation](docs/screenshot.png)
 
 ## What it does
 
