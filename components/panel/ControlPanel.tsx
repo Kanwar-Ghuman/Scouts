@@ -61,7 +61,15 @@ export function ControlPanel(props: Props) {
             </span>
             <AccountMenu account={props.account} />
           </div>
-          <p className="mt-1 text-sm text-zinc-500">A decision model for where to open your business.</p>
+          <p className="mt-1 text-sm text-zinc-500">
+            {props.account.businessName ? (
+              <>
+                Finding the best spot for <span className="font-medium text-zinc-800">{props.account.businessName}</span>.
+              </>
+            ) : (
+              "A decision model for where to open your business."
+            )}
+          </p>
         </header>
 
         <IntentBox loading={props.plan.loading} error={props.plan.error} plan={props.plan.data} onSubmit={props.onPlan} />

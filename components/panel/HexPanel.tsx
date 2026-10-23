@@ -15,6 +15,8 @@ import { reportUrl } from "@/lib/urlState";
 import type { Business, HexDetailResponse, ModelWeights, ScoredHex } from "@/types";
 
 interface Props {
+  /** The owner's business name, shown instead of the generic label when set. */
+  ownerName?: string | null;
   hex: ScoredHex | null;
   total: number;
   business: Business;
@@ -35,7 +37,7 @@ function CloseButton({ onClose }: { onClose: () => void }) {
   );
 }
 
-export function HexPanel({ hex, total, business, weights, detail, detailLoading, detailError, onRetry, onClose, onCompare }: Props) {
+export function HexPanel({ hex, total, business, ownerName, weights, detail, detailLoading, detailError, onRetry, onClose, onCompare }: Props) {
   if (!hex) {
     return (
       <div className="flex flex-col gap-3 p-5">
@@ -54,7 +56,7 @@ export function HexPanel({ hex, total, business, weights, detail, detailLoading,
         <div className="min-w-0 flex-1">
           <h2 className="text-xl font-semibold text-zinc-900">{scoreLabel(hex.score)} spot</h2>
           <p className="text-sm text-zinc-500 tabular-nums">
-            Rank #{hex.rank} of {total} for a {businessLabel(business).toLowerCase()}
+            Rank #{hex.rank} of {total} for {ownerName ?? `a ${businessLabel(business).toLowerCase()}`}
           </p>
         </div>
         <CloseButton onClose={onClose} />

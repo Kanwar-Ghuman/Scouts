@@ -25,7 +25,13 @@ function Section({ title, children }: { title: string; children: React.ReactNode
   );
 }
 
-export function OwnerReport() {
+interface Owner {
+  name: string;
+  businessName: string | null;
+  businessType: string | null;
+}
+
+export function OwnerReport({ owner }: { owner?: Owner }) {
   const params = useSearchParams();
   const { business, weights, hex: h3 } = readUrlState(new URLSearchParams(params.toString()));
   const features = useHexFeatures(business);
@@ -72,6 +78,7 @@ export function OwnerReport() {
   }
 
   const d = detail.data;
+  const ownBusiness = !!owner?.businessName && owner.businessType === business.type;
   const today = new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
 
   return (
@@ -80,8 +87,11 @@ export function OwnerReport() {
 
       <header className="flex items-start justify-between gap-6 border-b border-zinc-200 pb-5">
         <div>
-          <h1 className="text-2xl font-semibold">Site Scout location report</h1>
+          <h1 className="text-2xl font-semibold">
+            {ownBusiness ? `${owner!.businessName}: location report` : "Site Scout location report"}
+          </h1>
           <p className="mt-1 text-sm text-zinc-500">{label} · Pomona, CA area · {today}</p>
+          {owner && <p className="mt-0.5 text-sm text-zinc-500">Prepared for {owner.name}</p>}
         </div>
         <Wordmark className="mt-1 h-6 w-auto shrink-0" />
       </header>

@@ -13,6 +13,7 @@ export interface Account {
   name: string;
   email: string;
   businessName: string | null;
+  businessType: string | null;  // the preset picked at onboarding, so the name only shows for that business
 }
 
 export interface Business {

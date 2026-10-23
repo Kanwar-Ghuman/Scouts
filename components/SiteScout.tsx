@@ -194,6 +194,7 @@ export default function SiteScout({ account }: { account: Account }) {
         hex={byH3.get(selectedH3!) ?? null}
         total={scored.length}
         business={business}
+        ownerName={account.businessName && account.businessType === business.type ? account.businessName : null}
         weights={weights}
         detail={detail.data}
         detailLoading={detail.loading}
