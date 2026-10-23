@@ -1,0 +1,93 @@
+---
+description: Project-wide rules for Site Scout, a location decision model for small businesses
+globs:
+alwaysApply: true
+---
+
+# Site Scout: Cursor rules
+
+## Project overview
+Site Scout is a location decision model for small businesses. The user picks a business type and sets priority weights (students, workers, residents, shoppers, avoid competition). A deterministic model scores every H3 hexagon live in the browser. Clicking a spot shows the score math and an LLM explanation. Comparing two spots: the model picks the winner and the LLM explains the tradeoff. Owners can search a known place and print a one-page report.
+
+Built for Bronco MiniHacks: Local Businesses, Best Use of Snowflake (CoCo + Marketplace data + open-weight AI), Best Open-Source AI.
+
+**Theme: decision models + LLMs. The LLM generates. The model decides. The LLM explains.**
+`/api/plan` turns the owner's words into `{type, weights}`. `lib/model.ts` makes every decision. The LLM explains results.
+
+Stack: Next.js App Router + TypeScript + Tailwind + shadcn/ui on Vercel. Snowflake holds the data (Overture Places → `HEX_FEATURES`) and runs Llama 3.3 70B via `AI_COMPLETE`. Neon Postgres caches LLM text.
+
+Build guide in `instructions/`, in order: `00-today.md` (today's commands, timeline and prompts), `01-overview.md` (contract: model, data, API, types), `02-setup.md`, `03-data.md`, `04-api.md` (model code), `05-ui.md` (design system), `06-ship.md`, `07-pitch.md`. Follow `01-overview.md` for shapes and `05-ui.md` for anything visual.
+
+## Hard rules
+
+### Decision model
+1. **All scoring lives in `lib/model.ts`.** No scoring math anywhere else: not in SQL, components, routes or prompts.
+2. **`lib/model.ts` is pure TypeScript** with no React, Node or network imports. It runs in the browser and on the server.
+3. **The model decides, the LLM explains.** The LLM never picks a winner, never computes a score, and never changes the model's answer. Winners come from `pickWinner()`.
+4. **The server never trusts client scores.** It recomputes with `scoreAll()` from Snowflake features and `sanitizeWeights()` weights.
+5. **Weights are 0 to 3 in 0.5 steps.** Always pass them through `sanitizeWeights()`. Defaults live in `DEFAULT_WEIGHTS`.
+5b. **LLM-generated weights are untrusted input.** `/api/plan` output is parsed, validated with `isBusinessType()` and `sanitizeWeights()`, and falls back to keyword matching on any failure.
+
+### Architecture
+6. **Databases are server-only.** Only route handlers and `lib/` import `lib/snowflake.ts` or `lib/db.ts`. Client components fetch `/api/*` through hooks.
+7. **Map components only render.** No fetches in `components/map/`.
+8. **Import the map with `next/dynamic` and `ssr: false`.**
+9. **Every route sets `export const runtime = "nodejs"`.** LLM routes also set `export const maxDuration = 30`.
+10. **In dynamic routes, `params` is a Promise.** `const { id } = await params`.
+11. **One component per file.** Keep functions small.
+
+### Snowflake
+12. **Work as SYSADMIN.** App user is `SITE_SCOUT_APP`. Never create objects as ACCOUNTADMIN.
+13. **Snowflake computes features only** (`HEX_FEATURES`: counts per hex). Requests read them.
+14. **Runtime SQL lives in `lib/queries.ts`, setup SQL in `sql/`.** Use `?` binds for every user value. Never concatenate.
+15. **Snowflake returns UPPERCASE columns.** Map to camelCase in `lib/hexData.ts` only.
+16. **Validate `type` with `isBusinessType()`.** 400 otherwise.
+17. **H3 resolution 8. Hex IDs are strings.** Wrap them with `H3_STRING_TO_INT()` before H3 geo functions in SQL. Overture's category column is `BASIC_CATEGORY`.
+
+### LLM
+18. **Only `llama3.3-70b` through `AI_COMPLETE`, called via `complete()` in `lib/llm.ts`.** No other AI APIs.
+19. **Prompts only come from `lib/prompts.ts`.** The LLM sees only numbers the server computed.
+20. **Cache every LLM result in `ai_cache`** with keys that include `modelKey(weights)`. Check the cache first.
+21. **15s timeout.** On failure return the fallback text with status 200 and don't cache it. If Postgres fails, skip the cache.
+22. **Debounce LLM requests triggered by sliders (500 ms)** and ignore stale responses.
+
+### UI
+23. **Follow the design system in `05-ui.md`.** Zinc neutrals, one emerald accent, score colors only from `lib/colors.ts`, A/B colors only for compare. No emoji, no gradients on chrome.
+24. **Sliders rescore the map live** with `useMemo(scoreAll)`. Never wait on the network to recolor.
+25. **Every async area has a skeleton, an empty state and an error state with retry.**
+26. **Describe scores as "compared to nearby areas."** Never a probability of success.
+27. **Use shadcn/ui and lucide only.** Keep map attribution visible.
+
+### Demo safety
+28. **Support `MOCK_MODE=true`.** All data routes return `lib/mock.ts` data with no Snowflake or Postgres calls. Mock mode reads the real exports in `data/hexes-<type>.json` first.
+28b. **Postgres is optional.** Use `getSql()` from `lib/db.ts`. It returns null without `DATABASE_URL`, and the cache becomes a no-op.
+28c. **Never show a blank map.** If Snowflake fails, `/api/hexes` serves `data/hexes-<type>.json` with `source: "offline"`, and hex detail, verdict and compare use the same fallback. The UI shows the source in `StatusBadge`.
+28d. **Snowflake `query()` retries once** on dropped connections, never on SQL errors.
+28e. **LLM routes are rate limited** with `rateLimit()` after the cache check. Bad input returns 400 `{ error }`, rate limit returns 429 `{ error }`. Every error response is JSON `{ error: string }`.
+
+### Secrets
+29. **Never commit `.env.local` or `*.p8`.** Never prefix server env vars with `NEXT_PUBLIC_`.
+
+### General
+30. **No tests.** Working code first.
+31. **Add every new dependency to the README credits.**
+32. **Commit often with a prefix:** `[setup]`, `[data]`, `[model]`, `[api]`, `[ai]`, `[map]`, `[ui]`, `[app]`, `[docs]`. Judges check the commit history.
+
+## Key data flow
+```
+describe   -> usePlan -> POST /api/plan -> Llama -> sanitized {type, weights} -> sliders move
+type chip  -> useHexFeatures -> GET /api/hexes -> HEX_FEATURES counts
+sliders    -> weights -> useMemo(scoreAll) -> map colors, Top spots   (no network)
+hex click  -> GET /api/hex/[id] -> HexPanel + explainScore() math + competitor dots
+           -> POST /api/verdict {h3,type,weights} -> server scoreAll -> cache? -> Llama -> cache
+compare    -> pickWinner() on client for instant result
+           -> POST /api/compare {a,b,type,weights} -> server pickWinner -> cache? -> Llama tradeoff
+search     -> GET /api/search?q= -> PLACES by name -> fly to + select hex
+report     -> /report?type=&w=&hex= -> printable owner one-pager
+URL        -> ?type=&w=&hex=&a=&b=
+```
+
+## Naming
+- Components PascalCase (`HexPanel.tsx`). Hooks `useX.ts`. Functions camelCase. Types in `types/index.ts`.
+- Setup SQL numbered snake_case (`03_hex_features.sql`). Snowflake objects UPPER_SNAKE_CASE.
+- Imports: React/Next, third-party, then `@/`.

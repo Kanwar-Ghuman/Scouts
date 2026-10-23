@@ -1,0 +1,3492 @@
+[
+    {
+        "H3": "8829a0a5e9fffff",
+        "COMPETITORS": 5,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 2,
+        "SHOPPERS": 4,
+        "LAT": 33.98929490098507,
+        "LNG": -117.88266088343785
+    },
+    {
+        "H3": "8829a0a517fffff",
+        "COMPETITORS": 1,
+        "STUDENTS": 0,
+        "WORKERS": 2,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 33.98287560852774,
+        "LNG": -117.87562225537799
+    },
+    {
+        "H3": "8829a0a58dfffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 4,
+        "RESIDENTS": 0,
+        "SHOPPERS": 1,
+        "LAT": 34.00213097086689,
+        "LNG": -117.89673989055257
+    },
+    {
+        "H3": "8829a0a5e3fffff",
+        "COMPETITORS": 2,
+        "STUDENTS": 0,
+        "WORKERS": 2,
+        "RESIDENTS": 3,
+        "SHOPPERS": 2,
+        "LAT": 34.00411147446195,
+        "LNG": -117.88635708660787
+    },
+    {
+        "H3": "8829a0a585fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 2,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.01052889025825,
+        "LNG": -117.89339732558972
+    },
+    {
+        "H3": "8829a0a5e5fffff",
+        "COMPETITORS": 1,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 2,
+        "SHOPPERS": 1,
+        "LAT": 33.999672283178825,
+        "LNG": -117.86893391179295
+    },
+    {
+        "H3": "8829a0aed9fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 0,
+        "SHOPPERS": 1,
+        "LAT": 34.00165054481371,
+        "LNG": -117.85854953701333
+    },
+    {
+        "H3": "8829a0a5e7fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 1,
+        "LAT": 34.00609117664576,
+        "LNG": -117.87597342638854
+    },
+    {
+        "H3": "8829a0a5b3fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.03817305720056,
+        "LNG": -117.91117975782169
+    },
+    {
+        "H3": "8829a1db13fffff",
+        "COMPETITORS": 2,
+        "STUDENTS": 0,
+        "WORKERS": 3,
+        "RESIDENTS": 4,
+        "SHOPPERS": 1,
+        "LAT": 34.084582502246704,
+        "LNG": -117.91189725592902
+    },
+    {
+        "H3": "8829a1db3dfffff",
+        "COMPETITORS": 2,
+        "STUDENTS": 0,
+        "WORKERS": 4,
+        "RESIDENTS": 2,
+        "SHOPPERS": 5,
+        "LAT": 34.0841141316481,
+        "LNG": -117.87368126385826
+    },
+    {
+        "H3": "8829a1d94bfffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.100902646239604,
+        "LNG": -117.86698650656818
+    },
+    {
+        "H3": "8829a0ac8bfffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 1,
+        "WORKERS": 1,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.07919209453092,
+        "LNG": -117.81802143143751
+    },
+    {
+        "H3": "8829a1db3bfffff",
+        "COMPETITORS": 14,
+        "STUDENTS": 0,
+        "WORKERS": 23,
+        "RESIDENTS": 1,
+        "SHOPPERS": 7,
+        "LAT": 34.088547144889,
+        "LNG": -117.89111742475869
+    },
+    {
+        "H3": "8829a0aebdfffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 1,
+        "SHOPPERS": 0,
+        "LAT": 34.0391916927674,
+        "LNG": -117.82438294300498
+    },
+    {
+        "H3": "8829a1db53fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 2,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.06137933187926,
+        "LNG": -117.91153843263594
+    },
+    {
+        "H3": "8829a0ae85fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 1,
+        "LAT": 34.02437443181154,
+        "LNG": -117.82069276175613
+    },
+    {
+        "H3": "8829a0ac0dfffff",
+        "COMPETITORS": 2,
+        "STUDENTS": 1,
+        "WORKERS": 2,
+        "RESIDENTS": 1,
+        "SHOPPERS": 2,
+        "LAT": 34.0297849874602,
+        "LNG": -117.75130292440592
+    },
+    {
+        "H3": "8829a032dbfffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 1,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.09444841931011,
+        "LNG": -117.69658802266713
+    },
+    {
+        "H3": "8829a0af2bfffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 2,
+        "RESIDENTS": 0,
+        "SHOPPERS": 1,
+        "LAT": 34.001575161313944,
+        "LNG": -117.69533102569734
+    },
+    {
+        "H3": "8829a0ac33fffff",
+        "COMPETITORS": 1,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 2,
+        "SHOPPERS": 4,
+        "LAT": 34.065849301052175,
+        "LNG": -117.7657088858718
+    },
+    {
+        "H3": "8829a1d90bfffff",
+        "COMPETITORS": 2,
+        "STUDENTS": 1,
+        "WORKERS": 4,
+        "RESIDENTS": 1,
+        "SHOPPERS": 0,
+        "LAT": 34.124103014344726,
+        "LNG": -117.86733626736294
+    },
+    {
+        "H3": "8829a0a893fffff",
+        "COMPETITORS": 1,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 1,
+        "SHOPPERS": 0,
+        "LAT": 34.022294774934316,
+        "LNG": -117.66781286014785
+    },
+    {
+        "H3": "8829a0adedfffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 1,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.07766223861072,
+        "LNG": -117.70331312468146
+    },
+    {
+        "H3": "8829a0ae9bfffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 1,
+        "LAT": 34.03128286992381,
+        "LNG": -117.8659380926125
+    },
+    {
+        "H3": "8829a1db29fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 1,
+        "WORKERS": 5,
+        "RESIDENTS": 0,
+        "SHOPPERS": 1,
+        "LAT": 34.071283350396506,
+        "LNG": -117.85959310239213
+    },
+    {
+        "H3": "8829a1db35fffff",
+        "COMPETITORS": 1,
+        "STUDENTS": 2,
+        "WORKERS": 1,
+        "RESIDENTS": 2,
+        "SHOPPERS": 1,
+        "LAT": 34.09250857215903,
+        "LNG": -117.87033416219549
+    },
+    {
+        "H3": "8829a0acb9fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 0,
+        "SHOPPERS": 2,
+        "LAT": 34.09598009131319,
+        "LNG": -117.81131691991175
+    },
+    {
+        "H3": "8829a0ae21fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 2,
+        "RESIDENTS": 2,
+        "SHOPPERS": 2,
+        "LAT": 33.989771520273926,
+        "LNG": -117.75768740156136
+    },
+    {
+        "H3": "8829a0af11fffff",
+        "COMPETITORS": 8,
+        "STUDENTS": 0,
+        "WORKERS": 4,
+        "RESIDENTS": 4,
+        "SHOPPERS": 6,
+        "LAT": 34.00210622764619,
+        "LNG": -117.73354860614506
+    },
+    {
+        "H3": "8829a0ac23fffff",
+        "COMPETITORS": 3,
+        "STUDENTS": 7,
+        "WORKERS": 6,
+        "RESIDENTS": 3,
+        "SHOPPERS": 4,
+        "LAT": 34.054970735767974,
+        "LNG": -117.74123172790303
+    },
+    {
+        "H3": "8829a0ac03fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 1,
+        "SHOPPERS": 0,
+        "LAT": 34.042635589043336,
+        "LNG": -117.76538026280474
+    },
+    {
+        "H3": "8829a0ad05fffff",
+        "COMPETITORS": 1,
+        "STUDENTS": 1,
+        "WORKERS": 1,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.05194730542599,
+        "LNG": -117.67515847955744
+    },
+    {
+        "H3": "8829a032d9fffff",
+        "COMPETITORS": 11,
+        "STUDENTS": 0,
+        "WORKERS": 4,
+        "RESIDENTS": 3,
+        "SHOPPERS": 11,
+        "LAT": 34.08802134198341,
+        "LNG": -117.68954759517386
+    },
+    {
+        "H3": "8829a032d7fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 2,
+        "RESIDENTS": 1,
+        "SHOPPERS": 2,
+        "LAT": 34.1048064447929,
+        "LNG": -117.68281938974755
+    },
+    {
+        "H3": "8829a0adddfffff",
+        "COMPETITORS": 3,
+        "STUDENTS": 0,
+        "WORKERS": 30,
+        "RESIDENTS": 2,
+        "SHOPPERS": 4,
+        "LAT": 34.07621425692853,
+        "LNG": -117.75195442207914
+    },
+    {
+        "H3": "8829a0ad61fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 1,
+        "WORKERS": 0,
+        "RESIDENTS": 1,
+        "SHOPPERS": 0,
+        "LAT": 34.039084815625614,
+        "LNG": -117.66108469917705
+    },
+    {
+        "H3": "8829a0ac65fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 2,
+        "RESIDENTS": 0,
+        "SHOPPERS": 1,
+        "LAT": 34.02729486314234,
+        "LNG": -117.72347510550598
+    },
+    {
+        "H3": "8829a1d911fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 2,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.13692712853203,
+        "LNG": -117.88143149274703
+    },
+    {
+        "H3": "8829a0ae83fffff",
+        "COMPETITORS": 1,
+        "STUDENTS": 1,
+        "WORKERS": 2,
+        "RESIDENTS": 1,
+        "SHOPPERS": 4,
+        "LAT": 34.028819316055255,
+        "LNG": -117.83812166596644
+    },
+    {
+        "H3": "8829a0ad5dfffff",
+        "COMPETITORS": 3,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 1,
+        "SHOPPERS": 0,
+        "LAT": 34.031228073178774,
+        "LNG": -117.70268168554085
+    },
+    {
+        "H3": "8829a0ad89fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 1,
+        "WORKERS": 0,
+        "RESIDENTS": 2,
+        "SHOPPERS": 1,
+        "LAT": 34.086577703269064,
+        "LNG": -117.7381965610083
+    },
+    {
+        "H3": "8829a0ada9fffff",
+        "COMPETITORS": 5,
+        "STUDENTS": 28,
+        "WORKERS": 7,
+        "RESIDENTS": 2,
+        "SHOPPERS": 3,
+        "LAT": 34.09890755177799,
+        "LNG": -117.71403259552137
+    },
+    {
+        "H3": "8829a03641fffff",
+        "COMPETITORS": 2,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 1,
+        "SHOPPERS": 1,
+        "LAT": 34.11671482611621,
+        "LNG": -117.78381125332847
+    },
+    {
+        "H3": "8829a0adbdfffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 1,
+        "SHOPPERS": 0,
+        "LAT": 34.11175623340378,
+        "LNG": -117.7281166988782
+    },
+    {
+        "H3": "8829a0ae27fffff",
+        "COMPETITORS": 3,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 0,
+        "SHOPPERS": 1,
+        "LAT": 33.99816879461765,
+        "LNG": -117.75433266673073
+    },
+    {
+        "H3": "8829a0aca5fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 8,
+        "WORKERS": 1,
+        "RESIDENTS": 2,
+        "SHOPPERS": 1,
+        "LAT": 34.09548147112774,
+        "LNG": -117.7730801388614
+    },
+    {
+        "H3": "8829a1d865fffff",
+        "COMPETITORS": 3,
+        "STUDENTS": 0,
+        "WORKERS": 2,
+        "RESIDENTS": 1,
+        "SHOPPERS": 2,
+        "LAT": 34.10335399348964,
+        "LNG": -117.89481789296259
+    },
+    {
+        "H3": "8829a1d95dfffff",
+        "COMPETITORS": 1,
+        "STUDENTS": 0,
+        "WORKERS": 11,
+        "RESIDENTS": 1,
+        "SHOPPERS": 4,
+        "LAT": 34.107316371496914,
+        "LNG": -117.87403235289149
+    },
+    {
+        "H3": "8829a0a53bfffff",
+        "COMPETITORS": 1,
+        "STUDENTS": 0,
+        "WORKERS": 2,
+        "RESIDENTS": 1,
+        "SHOPPERS": 1,
+        "LAT": 33.98485419565833,
+        "LNG": -117.86523987276814
+    },
+    {
+        "H3": "8829a0a529fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 33.96756524694314,
+        "LNG": -117.83374510496
+    },
+    {
+        "H3": "8829a0aeebfffff",
+        "COMPETITORS": 1,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.00955556892617,
+        "LNG": -117.81700349754428
+    },
+    {
+        "H3": "8829a0accbfffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 29,
+        "WORKERS": 2,
+        "RESIDENTS": 2,
+        "SHOPPERS": 0,
+        "LAT": 34.055983020603605,
+        "LNG": -117.81768197967605
+    },
+    {
+        "H3": "8829a0a523fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 3,
+        "WORKERS": 0,
+        "RESIDENTS": 1,
+        "SHOPPERS": 0,
+        "LAT": 33.98238691960961,
+        "LNG": -117.83743492449483
+    },
+    {
+        "H3": "8829a0aed5fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 2,
+        "SHOPPERS": 0,
+        "LAT": 34.012025471833134,
+        "LNG": -117.84481731384685
+    },
+    {
+        "H3": "8829a0ace1fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 1,
+        "SHOPPERS": 0,
+        "LAT": 34.07029982211048,
+        "LNG": -117.78314637509973
+    },
+    {
+        "H3": "8829a0aea7fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 1,
+        "WORKERS": 3,
+        "RESIDENTS": 3,
+        "SHOPPERS": 1,
+        "LAT": 34.043141282319105,
+        "LNG": -117.80360024676948
+    },
+    {
+        "H3": "8829a0af3bfffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 1,
+        "SHOPPERS": 0,
+        "LAT": 34.01247014749595,
+        "LNG": -117.7197970306122
+    },
+    {
+        "H3": "8829a0ac31fffff",
+        "COMPETITORS": 5,
+        "STUDENTS": 3,
+        "WORKERS": 2,
+        "RESIDENTS": 5,
+        "SHOPPERS": 0,
+        "LAT": 34.05942565675186,
+        "LNG": -117.75866845179584
+    },
+    {
+        "H3": "8829a0adcdfffff",
+        "COMPETITORS": 2,
+        "STUDENTS": 0,
+        "WORKERS": 2,
+        "RESIDENTS": 1,
+        "SHOPPERS": 0,
+        "LAT": 34.065333839760214,
+        "LNG": -117.72747483054104
+    },
+    {
+        "H3": "8829a1d91dfffff",
+        "COMPETITORS": 3,
+        "STUDENTS": 1,
+        "WORKERS": 29,
+        "RESIDENTS": 0,
+        "SHOPPERS": 6,
+        "LAT": 34.13051549282497,
+        "LNG": -117.87438358733836
+    },
+    {
+        "H3": "8829a0ad5bfffff",
+        "COMPETITORS": 1,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 1,
+        "SHOPPERS": 0,
+        "LAT": 34.035690343387806,
+        "LNG": -117.72011616274474
+    },
+    {
+        "H3": "8829a0ad39fffff",
+        "COMPETITORS": 6,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 6,
+        "SHOPPERS": 4,
+        "LAT": 34.064806447292895,
+        "LNG": -117.68923462176059
+    },
+    {
+        "H3": "8829a1db31fffff",
+        "COMPETITORS": 2,
+        "STUDENTS": 0,
+        "WORKERS": 5,
+        "RESIDENTS": 1,
+        "SHOPPERS": 2,
+        "LAT": 34.09052826059066,
+        "LNG": -117.88072622211253
+    },
+    {
+        "H3": "8829a0accdfffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 3,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.05153679821325,
+        "LNG": -117.8002480491167
+    },
+    {
+        "H3": "8829a0ac4dfffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 1,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.006565704685514,
+        "LNG": -117.7509773777906
+    },
+    {
+        "H3": "8829a0af01fffff",
+        "COMPETITORS": 6,
+        "STUDENTS": 0,
+        "WORKERS": 2,
+        "RESIDENTS": 0,
+        "SHOPPERS": 1,
+        "LAT": 33.991213093787614,
+        "LNG": -117.70908502544385
+    },
+    {
+        "H3": "8829a0af27fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 1,
+        "LAT": 34.011935722522864,
+        "LNG": -117.6815736371539
+    },
+    {
+        "H3": "8829a0ac01fffff",
+        "COMPETITORS": 1,
+        "STUDENTS": 2,
+        "WORKERS": 0,
+        "RESIDENTS": 1,
+        "SHOPPERS": 3,
+        "LAT": 34.03621070715194,
+        "LNG": -117.75834129967885
+    },
+    {
+        "H3": "8829a0add3fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 1,
+        "SHOPPERS": 0,
+        "LAT": 34.089059905961385,
+        "LNG": -117.76603764503754
+    },
+    {
+        "H3": "8829a0ad33fffff",
+        "COMPETITORS": 2,
+        "STUDENTS": 1,
+        "WORKERS": 20,
+        "RESIDENTS": 6,
+        "SHOPPERS": 9,
+        "LAT": 34.07962823640159,
+        "LNG": -117.69291086442986
+    },
+    {
+        "H3": "8829a0ad31fffff",
+        "COMPETITORS": 4,
+        "STUDENTS": 0,
+        "WORKERS": 2,
+        "RESIDENTS": 1,
+        "SHOPPERS": 0,
+        "LAT": 34.073200121130974,
+        "LNG": -117.68587146767157
+    },
+    {
+        "H3": "8829a0af15fffff",
+        "COMPETITORS": 6,
+        "STUDENTS": 2,
+        "WORKERS": 19,
+        "RESIDENTS": 2,
+        "SHOPPERS": 10,
+        "LAT": 34.00407373721845,
+        "LNG": -117.72315530461728
+    },
+    {
+        "H3": "8829a0ad15fffff",
+        "COMPETITORS": 2,
+        "STUDENTS": 0,
+        "WORKERS": 2,
+        "RESIDENTS": 1,
+        "SHOPPERS": 4,
+        "LAT": 34.06284091900431,
+        "LNG": -117.69963573659996
+    },
+    {
+        "H3": "8829a0ad3dfffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 1,
+        "SHOPPERS": 0,
+        "LAT": 34.06677116799868,
+        "LNG": -117.67883266127991
+    },
+    {
+        "H3": "8829a0adabfffff",
+        "COMPETITORS": 3,
+        "STUDENTS": 5,
+        "WORKERS": 2,
+        "RESIDENTS": 0,
+        "SHOPPERS": 1,
+        "LAT": 34.105332312337424,
+        "LNG": -117.7210743523626
+    },
+    {
+        "H3": "8829a1d939fffff",
+        "COMPETITORS": 2,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 2,
+        "LAT": 34.14088818574563,
+        "LNG": -117.86063796460897
+    },
+    {
+        "H3": "8829a03645fffff",
+        "COMPETITORS": 1,
+        "STUDENTS": 0,
+        "WORKERS": 2,
+        "RESIDENTS": 4,
+        "SHOPPERS": 5,
+        "LAT": 34.11868771984456,
+        "LNG": -117.77341050662444
+    },
+    {
+        "H3": "8829a0ade1fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 1,
+        "LAT": 34.08408887699711,
+        "LNG": -117.7103532610653
+    },
+    {
+        "H3": "8829a0a5a1fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 1,
+        "LAT": 34.0209066256772,
+        "LNG": -117.87966941047469
+    },
+    {
+        "H3": "8829a0ad47fffff",
+        "COMPETITORS": 10,
+        "STUDENTS": 0,
+        "WORKERS": 3,
+        "RESIDENTS": 0,
+        "SHOPPERS": 6,
+        "LAT": 34.035158058105246,
+        "LNG": -117.68188488187944
+    },
+    {
+        "H3": "8829a0ad4dfffff",
+        "COMPETITORS": 3,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 4,
+        "SHOPPERS": 0,
+        "LAT": 34.02033146184441,
+        "LNG": -117.67821138404469
+    },
+    {
+        "H3": "8829a03299fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.11123312212561,
+        "LNG": -117.68986069825688
+    },
+    {
+        "H3": "8829a032d1fffff",
+        "COMPETITORS": 8,
+        "STUDENTS": 1,
+        "WORKERS": 0,
+        "RESIDENTS": 1,
+        "SHOPPERS": 0,
+        "LAT": 34.09641407825521,
+        "LNG": -117.68618377031791
+    },
+    {
+        "H3": "8829a0ada1fffff",
+        "COMPETITORS": 1,
+        "STUDENTS": 8,
+        "WORKERS": 1,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.10730005742057,
+        "LNG": -117.71067064834692
+    },
+    {
+        "H3": "8829a1d967fffff",
+        "COMPETITORS": 4,
+        "STUDENTS": 0,
+        "WORKERS": 3,
+        "RESIDENTS": 1,
+        "SHOPPERS": 2,
+        "LAT": 34.123624310162796,
+        "LNG": -117.8290992335419
+    },
+    {
+        "H3": "8829a0ac0bfffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.034240005925454,
+        "LNG": -117.76873533657982
+    },
+    {
+        "H3": "8829a0ad43fffff",
+        "COMPETITORS": 5,
+        "STUDENTS": 0,
+        "WORKERS": 5,
+        "RESIDENTS": 7,
+        "SHOPPERS": 6,
+        "LAT": 34.03319346892433,
+        "LNG": -117.69228370638135
+    },
+    {
+        "H3": "8829a0ade5fffff",
+        "COMPETITORS": 2,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 1,
+        "SHOPPERS": 2,
+        "LAT": 34.086055513483885,
+        "LNG": -117.69995085141652
+    },
+    {
+        "H3": "8829a0ac63fffff",
+        "COMPETITORS": 1,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 1,
+        "SHOPPERS": 0,
+        "LAT": 34.031754244986026,
+        "LNG": -117.74090818517023
+    },
+    {
+        "H3": "8829a0ad1dfffff",
+        "COMPETITORS": 3,
+        "STUDENTS": 0,
+        "WORKERS": 2,
+        "RESIDENTS": 1,
+        "SHOPPERS": 1,
+        "LAT": 34.05444670803735,
+        "LNG": -117.70299733974294
+    },
+    {
+        "H3": "8829a0ad07fffff",
+        "COMPETITORS": 1,
+        "STUDENTS": 0,
+        "WORKERS": 2,
+        "RESIDENTS": 1,
+        "SHOPPERS": 1,
+        "LAT": 34.05837729501467,
+        "LNG": -117.68219625550019
+    },
+    {
+        "H3": "8829a0ad63fffff",
+        "COMPETITORS": 1,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 1,
+        "SHOPPERS": 0,
+        "LAT": 34.0455164788539,
+        "LNG": -117.6681212940704
+    },
+    {
+        "H3": "8829a0ac3bfffff",
+        "COMPETITORS": 2,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 2,
+        "SHOPPERS": 1,
+        "LAT": 34.05745465024017,
+        "LNG": -117.76906462703874
+    },
+    {
+        "H3": "8829a0ad03fffff",
+        "COMPETITORS": 1,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 1,
+        "SHOPPERS": 0,
+        "LAT": 34.05641240515425,
+        "LNG": -117.69259722047762
+    },
+    {
+        "H3": "8829a1d943fffff",
+        "COMPETITORS": 3,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 2,
+        "SHOPPERS": 1,
+        "LAT": 34.10929635346609,
+        "LNG": -117.86363829686161
+    },
+    {
+        "H3": "8829a1d961fffff",
+        "COMPETITORS": 2,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 1,
+        "SHOPPERS": 2,
+        "LAT": 34.11523146775605,
+        "LNG": -117.83245099173368
+    },
+    {
+        "H3": "8829a0ad9bfffff",
+        "COMPETITORS": 6,
+        "STUDENTS": 1,
+        "WORKERS": 1,
+        "RESIDENTS": 2,
+        "SHOPPERS": 0,
+        "LAT": 34.10387461827076,
+        "LNG": -117.76972361713193
+    },
+    {
+        "H3": "8829a032cbfffff",
+        "COMPETITORS": 2,
+        "STUDENTS": 1,
+        "WORKERS": 0,
+        "RESIDENTS": 2,
+        "SHOPPERS": 3,
+        "LAT": 34.083557807851435,
+        "LNG": -117.67210380626318
+    },
+    {
+        "H3": "8829a0aca7fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 1,
+        "SHOPPERS": 0,
+        "LAT": 34.10190219629356,
+        "LNG": -117.78012322072954
+    },
+    {
+        "H3": "8829a0aedbfffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 2,
+        "RESIDENTS": 0,
+        "SHOPPERS": 1,
+        "LAT": 34.008070077128586,
+        "LNG": -117.86558891047083
+    },
+    {
+        "H3": "8829a0a5b9fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.023361204194515,
+        "LNG": -117.90747955426643
+    },
+    {
+        "H3": "8829a1db11fffff",
+        "COMPETITORS": 11,
+        "STUDENTS": 2,
+        "WORKERS": 1,
+        "RESIDENTS": 5,
+        "SHOPPERS": 1,
+        "LAT": 34.07817029259833,
+        "LNG": -117.90485187737653
+    },
+    {
+        "H3": "8829a1db59fffff",
+        "COMPETITORS": 1,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 3,
+        "SHOPPERS": 2,
+        "LAT": 34.04656964935581,
+        "LNG": -117.9078374189196
+    },
+    {
+        "H3": "8829a0ae97fffff",
+        "COMPETITORS": 1,
+        "STUDENTS": 0,
+        "WORKERS": 3,
+        "RESIDENTS": 3,
+        "SHOPPERS": 3,
+        "LAT": 34.0416576205148,
+        "LNG": -117.85220337231578
+    },
+    {
+        "H3": "8829a0ace3fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.07672114921634,
+        "LNG": -117.79018813042536
+    },
+    {
+        "H3": "8829a0aeabfffff",
+        "COMPETITORS": 1,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.03277084306835,
+        "LNG": -117.81734266840738
+    },
+    {
+        "H3": "8829a0aea1fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 1,
+        "WORKERS": 2,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.03474540101887,
+        "LNG": -117.80695189032417
+    },
+    {
+        "H3": "8829a0adc1fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.07175940042253,
+        "LNG": -117.7345148231207
+    },
+    {
+        "H3": "8829a0aec1fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 6,
+        "RESIDENTS": 1,
+        "SHOPPERS": 0,
+        "LAT": 33.999183013975326,
+        "LNG": -117.83073971974295
+    },
+    {
+        "H3": "8829a0acadfffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.08708795577071,
+        "LNG": -117.77643610568948
+    },
+    {
+        "H3": "8829a0ac25fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 1,
+        "SHOPPERS": 2,
+        "LAT": 34.05051289318306,
+        "LNG": -117.7237950388091
+    },
+    {
+        "H3": "8829a03293fffff",
+        "COMPETITORS": 1,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 2,
+        "SHOPPERS": 2,
+        "LAT": 34.12605055595052,
+        "LNG": -117.69353854222499
+    },
+    {
+        "H3": "8829a0ad69fffff",
+        "COMPETITORS": 5,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 3,
+        "SHOPPERS": 0,
+        "LAT": 34.03068997889525,
+        "LNG": -117.6644490572929
+    },
+    {
+        "H3": "8829a032c3fffff",
+        "COMPETITORS": 8,
+        "STUDENTS": 0,
+        "WORKERS": 2,
+        "RESIDENTS": 8,
+        "SHOPPERS": 5,
+        "LAT": 34.0919505738717,
+        "LNG": -117.66873854523789
+    },
+    {
+        "H3": "8829a0aebbfffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 3,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.04363506380477,
+        "LNG": -117.84181401506977
+    },
+    {
+        "H3": "8829a0ac39fffff",
+        "COMPETITORS": 2,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 1,
+        "SHOPPERS": 0,
+        "LAT": 34.051030806126946,
+        "LNG": -117.76202463458154
+    },
+    {
+        "H3": "8829a0acb7fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 2,
+        "RESIDENTS": 0,
+        "SHOPPERS": 1,
+        "LAT": 34.11276661775407,
+        "LNG": -117.8046101901836
+    },
+    {
+        "H3": "8829a0ad3bfffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 1,
+        "LAT": 34.0712347619338,
+        "LNG": -117.69627357820042
+    },
+    {
+        "H3": "8829a0ac3dfffff",
+        "COMPETITORS": 13,
+        "STUDENTS": 1,
+        "WORKERS": 5,
+        "RESIDENTS": 7,
+        "SHOPPERS": 4,
+        "LAT": 34.05300117387618,
+        "LNG": -117.75162860580753
+    },
+    {
+        "H3": "8829a0af21fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 4,
+        "RESIDENTS": 1,
+        "SHOPPERS": 1,
+        "LAT": 34.0035396170834,
+        "LNG": -117.68493533534576
+    },
+    {
+        "H3": "8829a0ade3fffff",
+        "COMPETITORS": 6,
+        "STUDENTS": 1,
+        "WORKERS": 6,
+        "RESIDENTS": 4,
+        "SHOPPERS": 1,
+        "LAT": 34.090514676766645,
+        "LNG": -117.71739398721354
+    },
+    {
+        "H3": "8829a1d969fffff",
+        "COMPETITORS": 2,
+        "STUDENTS": 0,
+        "WORKERS": 26,
+        "RESIDENTS": 2,
+        "SHOPPERS": 2,
+        "LAT": 34.106838257282135,
+        "LNG": -117.83580219538085
+    },
+    {
+        "H3": "8829a0ad93fffff",
+        "COMPETITORS": 11,
+        "STUDENTS": 2,
+        "WORKERS": 5,
+        "RESIDENTS": 3,
+        "SHOPPERS": 5,
+        "LAT": 34.1122673967759,
+        "LNG": -117.76636654038649
+    },
+    {
+        "H3": "8829a032c9fffff",
+        "COMPETITORS": 9,
+        "STUDENTS": 0,
+        "WORKERS": 3,
+        "RESIDENTS": 3,
+        "SHOPPERS": 4,
+        "LAT": 34.07712841551099,
+        "LNG": -117.66506471048572
+    },
+    {
+        "H3": "8829a0365bfffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 1,
+        "WORKERS": 1,
+        "RESIDENTS": 0,
+        "SHOPPERS": 1,
+        "LAT": 34.12560090358755,
+        "LNG": -117.81870075678785
+    },
+    {
+        "H3": "8829a0a5a9fffff",
+        "COMPETITORS": 4,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 2,
+        "SHOPPERS": 2,
+        "LAT": 34.01250923142705,
+        "LNG": -117.8830135250678
+    },
+    {
+        "H3": "8829a0aed1fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 4,
+        "RESIDENTS": 5,
+        "SHOPPERS": 5,
+        "LAT": 34.010048175620845,
+        "LNG": -117.85520353943132
+    },
+    {
+        "H3": "8829a0a587fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.01694546694396,
+        "LNG": -117.90043814818927
+    },
+    {
+        "H3": "8829a0aee9fffff",
+        "COMPETITORS": 1,
+        "STUDENTS": 0,
+        "WORKERS": 12,
+        "RESIDENTS": 5,
+        "SHOPPERS": 4,
+        "LAT": 34.00313264373427,
+        "LNG": -117.80996527958855
+    },
+    {
+        "H3": "8829a1db45fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.046096627893135,
+        "LNG": -117.86963374723267
+    },
+    {
+        "H3": "8829a1db19fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 1,
+        "SHOPPERS": 1,
+        "LAT": 34.069774994635374,
+        "LNG": -117.90819543169812
+    },
+    {
+        "H3": "8829a1db33fffff",
+        "COMPETITORS": 4,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 2,
+        "SHOPPERS": 1,
+        "LAT": 34.0969415479791,
+        "LNG": -117.88777176519406
+    },
+    {
+        "H3": "8829a0acd9fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.06042632092772,
+        "LNG": -117.83511593086668
+    },
+    {
+        "H3": "8829a0aea9fffff",
+        "COMPETITORS": 3,
+        "STUDENTS": 1,
+        "WORKERS": 3,
+        "RESIDENTS": 5,
+        "SHOPPERS": 0,
+        "LAT": 34.02634915473698,
+        "LNG": -117.81030297989528
+    },
+    {
+        "H3": "8829a1db07fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 2,
+        "WORKERS": 5,
+        "RESIDENTS": 2,
+        "SHOPPERS": 0,
+        "LAT": 34.07571932513066,
+        "LNG": -117.87702781167106
+    },
+    {
+        "H3": "8829a0a5a3fffff",
+        "COMPETITORS": 4,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.02732364126111,
+        "LNG": -117.88671053674129
+    },
+    {
+        "H3": "8829a0aca3fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 2,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.099928967615725,
+        "LNG": -117.7905219727789
+    },
+    {
+        "H3": "8829a0ae13fffff",
+        "COMPETITORS": 3,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 1,
+        "SHOPPERS": 1,
+        "LAT": 33.99473510601995,
+        "LNG": -117.81331515005814
+    },
+    {
+        "H3": "8829a0ac9bfffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.09005073382753,
+        "LNG": -117.84250293949997
+    },
+    {
+        "H3": "8829a0ae45fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 2,
+        "SHOPPERS": 0,
+        "LAT": 33.956178788639946,
+        "LNG": -117.77110080207335
+    },
+    {
+        "H3": "8829a0aec5fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 0,
+        "SHOPPERS": 4,
+        "LAT": 34.00115823024645,
+        "LNG": -117.82035292585095
+    },
+    {
+        "H3": "8829a0acc3fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 1,
+        "SHOPPERS": 0,
+        "LAT": 34.0643781361413,
+        "LNG": -117.81433066692743
+    },
+    {
+        "H3": "8829a0acd1fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 1,
+        "SHOPPERS": 0,
+        "LAT": 34.06882140126193,
+        "LNG": -117.83176605785883
+    },
+    {
+        "H3": "8829a0ae69fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 33.95814873477694,
+        "LNG": -117.76071416944075
+    },
+    {
+        "H3": "8829a032d5fffff",
+        "COMPETITORS": 8,
+        "STUDENTS": 1,
+        "WORKERS": 1,
+        "RESIDENTS": 1,
+        "SHOPPERS": 1,
+        "LAT": 34.098378928599445,
+        "LNG": -117.67577867202846
+    },
+    {
+        "H3": "8829a1db05fffff",
+        "COMPETITORS": 3,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 1,
+        "SHOPPERS": 1,
+        "LAT": 34.06930415358039,
+        "LNG": -117.86998388222872
+    },
+    {
+        "H3": "8829a0ac93fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 10,
+        "RESIDENTS": 0,
+        "SHOPPERS": 1,
+        "LAT": 34.098444679164714,
+        "LNG": -117.83915284459806
+    },
+    {
+        "H3": "8829a0acc1fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 2,
+        "WORKERS": 1,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.05795788683016,
+        "LNG": -117.80728906469952
+    },
+    {
+        "H3": "8829a0ac91fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 1,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.092027991674726,
+        "LNG": -117.83210845389117
+    },
+    {
+        "H3": "8829a0a1b7fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 1,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 33.9640537552113,
+        "LNG": -117.72954918451711
+    },
+    {
+        "H3": "8829a0af1dfffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 3,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 33.99567696187564,
+        "LNG": -117.72651302416612
+    },
+    {
+        "H3": "8829a0adc3fffff",
+        "COMPETITORS": 1,
+        "STUDENTS": 0,
+        "WORKERS": 3,
+        "RESIDENTS": 1,
+        "SHOPPERS": 2,
+        "LAT": 34.078184122488416,
+        "LNG": -117.74155540462633
+    },
+    {
+        "H3": "8829a0ad81fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 6,
+        "RESIDENTS": 2,
+        "SHOPPERS": 0,
+        "LAT": 34.09497091563117,
+        "LNG": -117.73483716225395
+    },
+    {
+        "H3": "8829a1d955fffff",
+        "COMPETITORS": 1,
+        "STUDENTS": 0,
+        "WORKERS": 4,
+        "RESIDENTS": 2,
+        "SHOPPERS": 2,
+        "LAT": 34.11570987663995,
+        "LNG": -117.87068458722301
+    },
+    {
+        "H3": "8829a0adebfffff",
+        "COMPETITORS": 1,
+        "STUDENTS": 1,
+        "WORKERS": 15,
+        "RESIDENTS": 3,
+        "SHOPPERS": 1,
+        "LAT": 34.08212143281051,
+        "LNG": -117.72075482353786
+    },
+    {
+        "H3": "8829a0acb3fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 2,
+        "SHOPPERS": 1,
+        "LAT": 34.11079130369811,
+        "LNG": -117.81500837917396
+    },
+    {
+        "H3": "8829a03651fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 1,
+        "SHOPPERS": 0,
+        "LAT": 34.127576690450866,
+        "LNG": -117.80830142585917
+    },
+    {
+        "H3": "8829a0af17fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 1,
+        "SHOPPERS": 0,
+        "LAT": 34.01050280484682,
+        "LNG": -117.73019132709183
+    },
+    {
+        "H3": "8829a03659fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 2,
+        "WORKERS": 0,
+        "RESIDENTS": 1,
+        "SHOPPERS": 0,
+        "LAT": 34.119184181371196,
+        "LNG": -117.81165517990556
+    },
+    {
+        "H3": "8829a0ac17fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 2,
+        "RESIDENTS": 1,
+        "SHOPPERS": 1,
+        "LAT": 34.0554828381209,
+        "LNG": -117.77945995205978
+    },
+    {
+        "H3": "8829a1db15fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 2,
+        "RESIDENTS": 0,
+        "SHOPPERS": 3,
+        "LAT": 34.080152375894876,
+        "LNG": -117.89446253059296
+    },
+    {
+        "H3": "8829a0aca1fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 1,
+        "WORKERS": 1,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.09350888174406,
+        "LNG": -117.78347874537512
+    },
+    {
+        "H3": "8829a0ae23fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 33.99619887173669,
+        "LNG": -117.76472342462868
+    },
+    {
+        "H3": "8829a0af1bfffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.00013791335005,
+        "LNG": -117.74394106037626
+    },
+    {
+        "H3": "8829a0329bfffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.1176589602713,
+        "LNG": -117.69690259741809
+    },
+    {
+        "H3": "8829a0ae17fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 33.996708881010825,
+        "LNG": -117.80292764762413
+    },
+    {
+        "H3": "8829a0aeadfffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.028323073899706,
+        "LNG": -117.79991234586836
+    },
+    {
+        "H3": "8829a0a5a5fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.02288600209227,
+        "LNG": -117.86928375711736
+    },
+    {
+        "H3": "8829a1da2dfffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.05939611929555,
+        "LNG": -117.92192492511845
+    },
+    {
+        "H3": "8829a0a5edfffff",
+        "COMPETITORS": 1,
+        "STUDENTS": 0,
+        "WORKERS": 4,
+        "RESIDENTS": 1,
+        "SHOPPERS": 3,
+        "LAT": 33.99127412683694,
+        "LNG": -117.87227836005724
+    },
+    {
+        "H3": "8829a0a581fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.00854774764149,
+        "LNG": -117.90378026932754
+    },
+    {
+        "H3": "8829a0a53dfffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 33.980410573915705,
+        "LNG": -117.84781887390577
+    },
+    {
+        "H3": "8829a0a535fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 1,
+        "WORKERS": 2,
+        "RESIDENTS": 0,
+        "SHOPPERS": 1,
+        "LAT": 33.98880896572876,
+        "LNG": -117.84447254388576
+    },
+    {
+        "H3": "8829a1db03fffff",
+        "COMPETITORS": 4,
+        "STUDENTS": 0,
+        "WORKERS": 10,
+        "RESIDENTS": 3,
+        "SHOPPERS": 13,
+        "LAT": 34.073738685015705,
+        "LNG": -117.88741787594354
+    },
+    {
+        "H3": "8829a1d949fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 1,
+        "WORKERS": 1,
+        "RESIDENTS": 1,
+        "SHOPPERS": 0,
+        "LAT": 34.094488079304064,
+        "LNG": -117.8599412455853
+    },
+    {
+        "H3": "8829a1d869fffff",
+        "COMPETITORS": 5,
+        "STUDENTS": 1,
+        "WORKERS": 0,
+        "RESIDENTS": 1,
+        "SHOPPERS": 1,
+        "LAT": 34.09297723304012,
+        "LNG": -117.90855359269395
+    },
+    {
+        "H3": "8829a1db1dfffff",
+        "COMPETITORS": 8,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 1,
+        "LAT": 34.071757241420535,
+        "LNG": -117.89780708281157
+    },
+    {
+        "H3": "8829a0aed7fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 1,
+        "WORKERS": 2,
+        "RESIDENTS": 1,
+        "SHOPPERS": 2,
+        "LAT": 34.01844544334808,
+        "LNG": -117.85185698856037
+    },
+    {
+        "H3": "8829a1db01fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 1,
+        "SHOPPERS": 0,
+        "LAT": 34.06732415303061,
+        "LNG": -117.88037380574862
+    },
+    {
+        "H3": "8829a0aeb9fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 1,
+        "LAT": 34.037215692090314,
+        "LNG": -117.83477301163194
+    },
+    {
+        "H3": "8829a0acc5fffff",
+        "COMPETITORS": 1,
+        "STUDENTS": 0,
+        "WORKERS": 6,
+        "RESIDENTS": 3,
+        "SHOPPERS": 0,
+        "LAT": 34.059931948277,
+        "LNG": -117.79689529725142
+    },
+    {
+        "H3": "8829a0af0dfffff",
+        "COMPETITORS": 2,
+        "STUDENTS": 0,
+        "WORKERS": 5,
+        "RESIDENTS": 0,
+        "SHOPPERS": 2,
+        "LAT": 33.98478151863967,
+        "LNG": -117.70205076902145
+    },
+    {
+        "H3": "8829a0af3dfffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 1,
+        "WORKERS": 3,
+        "RESIDENTS": 1,
+        "SHOPPERS": 1,
+        "LAT": 34.00800634104192,
+        "LNG": -117.70236616199405
+    },
+    {
+        "H3": "8829a0ac67fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 2,
+        "RESIDENTS": 1,
+        "SHOPPERS": 0,
+        "LAT": 34.033722697057776,
+        "LNG": -117.73051259775626
+    },
+    {
+        "H3": "8829a0ac69fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 2,
+        "LAT": 34.01693103598109,
+        "LNG": -117.73722793797377
+    },
+    {
+        "H3": "8829a0ac05fffff",
+        "COMPETITORS": 3,
+        "STUDENTS": 1,
+        "WORKERS": 2,
+        "RESIDENTS": 2,
+        "SHOPPERS": 2,
+        "LAT": 34.03818060317373,
+        "LNG": -117.74794641350849
+    },
+    {
+        "H3": "8829a0ad01fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 1,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.0499830538913,
+        "LNG": -117.68555929434761
+    },
+    {
+        "H3": "8829a03289fffff",
+        "COMPETITORS": 3,
+        "STUDENTS": 0,
+        "WORKERS": 5,
+        "RESIDENTS": 2,
+        "SHOPPERS": 0,
+        "LAT": 34.1003429700557,
+        "LNG": -117.66537272838204
+    },
+    {
+        "H3": "8829a0ad91fffff",
+        "COMPETITORS": 1,
+        "STUDENTS": 2,
+        "WORKERS": 0,
+        "RESIDENTS": 1,
+        "SHOPPERS": 1,
+        "LAT": 34.105846233258724,
+        "LNG": -117.7593231625668
+    },
+    {
+        "H3": "8829a0ae87fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 0,
+        "SHOPPERS": 2,
+        "LAT": 34.03079548131749,
+        "LNG": -117.82773259381423
+    },
+    {
+        "H3": "8829a1db23fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 2,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.086093803524534,
+        "LNG": -117.86328934506182
+    },
+    {
+        "H3": "8829a0ae8bfffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 6,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.020422575828036,
+        "LNG": -117.8414697666666
+    },
+    {
+        "H3": "8829a0acc9fffff",
+        "COMPETITORS": 1,
+        "STUDENTS": 1,
+        "WORKERS": 1,
+        "RESIDENTS": 4,
+        "SHOPPERS": 1,
+        "LAT": 34.049562571002035,
+        "LNG": -117.81064081999352
+    },
+    {
+        "H3": "8829a0acb1fffff",
+        "COMPETITORS": 15,
+        "STUDENTS": 0,
+        "WORKERS": 6,
+        "RESIDENTS": 3,
+        "SHOPPERS": 7,
+        "LAT": 34.10437353853821,
+        "LNG": -117.80796383238028
+    },
+    {
+        "H3": "8829a0ac51fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 2,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.02387238503722,
+        "LNG": -117.78248204724107
+    },
+    {
+        "H3": "8829a0ae2dfffff",
+        "COMPETITORS": 5,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 0,
+        "SHOPPERS": 1,
+        "LAT": 33.98334333256304,
+        "LNG": -117.75065196587798
+    },
+    {
+        "H3": "8829a0af35fffff",
+        "COMPETITORS": 4,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 2,
+        "SHOPPERS": 1,
+        "LAT": 34.01640241649409,
+        "LNG": -117.69900589829581
+    },
+    {
+        "H3": "8829a0ac21fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 1,
+        "SHOPPERS": 0,
+        "LAT": 34.0485447760205,
+        "LNG": -117.7341926174467
+    },
+    {
+        "H3": "8829a0ac37fffff",
+        "COMPETITORS": 6,
+        "STUDENTS": 0,
+        "WORKERS": 6,
+        "RESIDENTS": 3,
+        "SHOPPERS": 0,
+        "LAT": 34.0678201404938,
+        "LNG": -117.7553117143332
+    },
+    {
+        "H3": "8829a0add1fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 1,
+        "LAT": 34.082637501119805,
+        "LNG": -117.75899573939711
+    },
+    {
+        "H3": "8829a0ad8bfffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 2,
+        "RESIDENTS": 0,
+        "SHOPPERS": 2,
+        "LAT": 34.093001386179836,
+        "LNG": -117.74523817273872
+    },
+    {
+        "H3": "8829a1d957fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 2,
+        "WORKERS": 1,
+        "RESIDENTS": 1,
+        "SHOPPERS": 1,
+        "LAT": 34.12212255758789,
+        "LNG": -117.87773146297131
+    },
+    {
+        "H3": "8829a0ada3fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 1,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.113724617552066,
+        "LNG": -117.71771284625646
+    },
+    {
+        "H3": "8829a0374dfffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 1,
+        "SHOPPERS": 1,
+        "LAT": 34.124083958903896,
+        "LNG": -117.70394508709273
+    },
+    {
+        "H3": "8829a0af63fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 1,
+        "LAT": 33.98674630955032,
+        "LNG": -117.69165706743432
+    },
+    {
+        "H3": "8829a1d95bfffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 1,
+        "WORKERS": 1,
+        "RESIDENTS": 3,
+        "SHOPPERS": 1,
+        "LAT": 34.111747828041686,
+        "LNG": -117.89147212395926
+    },
+    {
+        "H3": "8829a0ad13fffff",
+        "COMPETITORS": 2,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 4,
+        "SHOPPERS": 2,
+        "LAT": 34.06730162096103,
+        "LNG": -117.71707526021723
+    },
+    {
+        "H3": "8829a1d959fffff",
+        "COMPETITORS": 2,
+        "STUDENTS": 1,
+        "WORKERS": 0,
+        "RESIDENTS": 4,
+        "SHOPPERS": 0,
+        "LAT": 34.105335584741375,
+        "LNG": -117.88442555178445
+    },
+    {
+        "H3": "8829a0af53fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 0,
+        "SHOPPERS": 1,
+        "LAT": 33.98531197926327,
+        "LNG": -117.7402615013435
+    },
+    {
+        "H3": "8829a0af39fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 1,
+        "WORKERS": 1,
+        "RESIDENTS": 0,
+        "SHOPPERS": 1,
+        "LAT": 34.00604044177946,
+        "LNG": -117.71276115637335
+    },
+    {
+        "H3": "8829a0ade9fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 1,
+        "SHOPPERS": 0,
+        "LAT": 34.07569543315893,
+        "LNG": -117.71371453826849
+    },
+    {
+        "H3": "8829a0addbfffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 1,
+        "SHOPPERS": 1,
+        "LAT": 34.080666190020935,
+        "LNG": -117.76939405386119
+    },
+    {
+        "H3": "8829a0ad2bfffff",
+        "COMPETITORS": 3,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 3,
+        "SHOPPERS": 2,
+        "LAT": 34.06034137733155,
+        "LNG": -117.67179444539308
+    },
+    {
+        "H3": "8829a1d951fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 1,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.11372925475218,
+        "LNG": -117.8810787844151
+    },
+    {
+        "H3": "8829a1d919fffff",
+        "COMPETITORS": 4,
+        "STUDENTS": 8,
+        "WORKERS": 3,
+        "RESIDENTS": 4,
+        "SHOPPERS": 1,
+        "LAT": 34.12853439598636,
+        "LNG": -117.88477892396625
+    },
+    {
+        "H3": "8829a0adb5fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.120148337966555,
+        "LNG": -117.72475563402763
+    },
+    {
+        "H3": "8829a0af09fffff",
+        "COMPETITORS": 15,
+        "STUDENTS": 0,
+        "WORKERS": 11,
+        "RESIDENTS": 7,
+        "SHOPPERS": 8,
+        "LAT": 33.9828159228353,
+        "LNG": -117.71244362542386
+    },
+    {
+        "H3": "8829a0ac09fffff",
+        "COMPETITORS": 1,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 2,
+        "SHOPPERS": 2,
+        "LAT": 34.02781492476812,
+        "LNG": -117.76169681488294
+    },
+    {
+        "H3": "8829a0af33fffff",
+        "COMPETITORS": 2,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.02086619228327,
+        "LNG": -117.71643820203658
+    },
+    {
+        "H3": "8829a0ad09fffff",
+        "COMPETITORS": 1,
+        "STUDENTS": 0,
+        "WORKERS": 7,
+        "RESIDENTS": 2,
+        "SHOPPERS": 0,
+        "LAT": 34.04158844505302,
+        "LNG": -117.68892177793654
+    },
+    {
+        "H3": "8829a1d905fffff",
+        "COMPETITORS": 9,
+        "STUDENTS": 0,
+        "WORKERS": 2,
+        "RESIDENTS": 0,
+        "SHOPPERS": 1,
+        "LAT": 34.12806151125019,
+        "LNG": -117.84654330571684
+    },
+    {
+        "H3": "8829a0ad97fffff",
+        "COMPETITORS": 3,
+        "STUDENTS": 1,
+        "WORKERS": 0,
+        "RESIDENTS": 1,
+        "SHOPPERS": 0,
+        "LAT": 34.114238843767865,
+        "LNG": -117.75596508869056
+    },
+    {
+        "H3": "8829a03749fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.122116552813345,
+        "LNG": -117.71435078455455
+    },
+    {
+        "H3": "8829a1db17fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 1,
+        "WORKERS": 1,
+        "RESIDENTS": 1,
+        "SHOPPERS": 1,
+        "LAT": 34.08656522534425,
+        "LNG": -117.90150776955653
+    },
+    {
+        "H3": "8829a0aea5fffff",
+        "COMPETITORS": 1,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.03671915488024,
+        "LNG": -117.79656026014325
+    },
+    {
+        "H3": "8829a0aeb5fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 2,
+        "WORKERS": 1,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.04758753933755,
+        "LNG": -117.82103273833042
+    },
+    {
+        "H3": "8829a0aeb7fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 2,
+        "WORKERS": 1,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.054007349886284,
+        "LNG": -117.82807404160202
+    },
+    {
+        "H3": "8829a0acebfffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 1,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.068326732086085,
+        "LNG": -117.79354199105914
+    },
+    {
+        "H3": "8829a0ac97fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 4,
+        "WORKERS": 2,
+        "RESIDENTS": 0,
+        "SHOPPERS": 2,
+        "LAT": 34.100421771300994,
+        "LNG": -117.82875736137802
+    },
+    {
+        "H3": "8829a0af51fffff",
+        "COMPETITORS": 1,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 2,
+        "LAT": 33.97888231769369,
+        "LNG": -117.73322680035197
+    },
+    {
+        "H3": "8829a0ad49fffff",
+        "COMPETITORS": 6,
+        "STUDENTS": 2,
+        "WORKERS": 9,
+        "RESIDENTS": 1,
+        "SHOPPERS": 5,
+        "LAT": 34.01836734226872,
+        "LNG": -117.68860906362133
+    },
+    {
+        "H3": "8829a0a5e1fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 2,
+        "SHOPPERS": 2,
+        "LAT": 33.99769321987987,
+        "LNG": -117.87931743138374
+    },
+    {
+        "H3": "8829a0acddfffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 5,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.06240263079858,
+        "LNG": -117.82472372567767
+    },
+    {
+        "H3": "8829a0aea3fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.04116688960664,
+        "LNG": -117.81399202119131
+    },
+    {
+        "H3": "8829a0af05fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 2,
+        "RESIDENTS": 0,
+        "SHOPPERS": 5,
+        "LAT": 33.99317852247927,
+        "LNG": -117.69869117464627
+    },
+    {
+        "H3": "8829a0ac2bfffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 2,
+        "SHOPPERS": 1,
+        "LAT": 34.04657585275113,
+        "LNG": -117.74458934804566
+    },
+    {
+        "H3": "8829a0ac6dfffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 2,
+        "SHOPPERS": 0,
+        "LAT": 34.018899016820455,
+        "LNG": -117.72683349358357
+    },
+    {
+        "H3": "8829a0adc9fffff",
+        "COMPETITORS": 4,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 2,
+        "SHOPPERS": 3,
+        "LAT": 34.06336525179987,
+        "LNG": -117.73787355296619
+    },
+    {
+        "H3": "8829a1d96bfffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 2,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.113253901885436,
+        "LNG": -117.84284761570404
+    },
+    {
+        "H3": "8829a0adb9fffff",
+        "COMPETITORS": 6,
+        "STUDENTS": 0,
+        "WORKERS": 2,
+        "RESIDENTS": 4,
+        "SHOPPERS": 1,
+        "LAT": 34.10978704111345,
+        "LNG": -117.73851970285844
+    },
+    {
+        "H3": "8829a0ad21fffff",
+        "COMPETITORS": 1,
+        "STUDENTS": 0,
+        "WORKERS": 2,
+        "RESIDENTS": 2,
+        "SHOPPERS": 0,
+        "LAT": 34.06230465181802,
+        "LNG": -117.66139179073896
+    },
+    {
+        "H3": "8829a1d901fffff",
+        "COMPETITORS": 4,
+        "STUDENTS": 0,
+        "WORKERS": 2,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.12608266566216,
+        "LNG": -117.85694021475193
+    },
+    {
+        "H3": "8829a0acb5fffff",
+        "COMPETITORS": 1,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 2,
+        "SHOPPERS": 3,
+        "LAT": 34.106348213060684,
+        "LNG": -117.79756578776153
+    },
+    {
+        "H3": "8829a03649fffff",
+        "COMPETITORS": 1,
+        "STUDENTS": 1,
+        "WORKERS": 0,
+        "RESIDENTS": 1,
+        "SHOPPERS": 0,
+        "LAT": 34.10832208113368,
+        "LNG": -117.78716689050273
+    },
+    {
+        "H3": "8829a1d92dfffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.13201678407879,
+        "LNG": -117.82574692069073
+    },
+    {
+        "H3": "8829a0aee7fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 2,
+        "RESIDENTS": 0,
+        "SHOPPERS": 1,
+        "LAT": 34.0199266280988,
+        "LNG": -117.80326387760802
+    },
+    {
+        "H3": "8829a0af5dfffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 1,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 33.97245182063201,
+        "LNG": -117.7261926873464
+    },
+    {
+        "H3": "8829a0ac55fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 1,
+        "SHOPPERS": 0,
+        "LAT": 34.025844057197766,
+        "LNG": -117.77208985602125
+    },
+    {
+        "H3": "8829a0af31fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 2,
+        "SHOPPERS": 0,
+        "LAT": 34.01443668480746,
+        "LNG": -117.70940188748654
+    },
+    {
+        "H3": "8829a0adadfffff",
+        "COMPETITORS": 2,
+        "STUDENTS": 10,
+        "WORKERS": 0,
+        "RESIDENTS": 1,
+        "SHOPPERS": 0,
+        "LAT": 34.1008746578979,
+        "LNG": -117.70362904043763
+    },
+    {
+        "H3": "8829a03643fffff",
+        "COMPETITORS": 1,
+        "STUDENTS": 1,
+        "WORKERS": 1,
+        "RESIDENTS": 2,
+        "SHOPPERS": 0,
+        "LAT": 34.12313366888951,
+        "LNG": -117.7908559534255
+    },
+    {
+        "H3": "8829a0ac61fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 2,
+        "RESIDENTS": 3,
+        "SHOPPERS": 0,
+        "LAT": 34.025327049426075,
+        "LNG": -117.73387054514907
+    },
+    {
+        "H3": "8829a1d963fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 1,
+        "SHOPPERS": 0,
+        "LAT": 34.12164691046602,
+        "LNG": -117.83949685554164
+    },
+    {
+        "H3": "8829a0ade7fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 2,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 1,
+        "LAT": 34.09248195205145,
+        "LNG": -117.70699142849317
+    },
+    {
+        "H3": "8829a032d3fffff",
+        "COMPETITORS": 6,
+        "STUDENTS": 0,
+        "WORKERS": 2,
+        "RESIDENTS": 4,
+        "SHOPPERS": 1,
+        "LAT": 34.10284095566534,
+        "LNG": -117.69322463831874
+    },
+    {
+        "H3": "8829a0af19fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 33.99370928564336,
+        "LNG": -117.73690533085754
+    },
+    {
+        "H3": "8829a0af13fffff",
+        "COMPETITORS": 1,
+        "STUDENTS": 0,
+        "WORKERS": 7,
+        "RESIDENTS": 3,
+        "SHOPPERS": 4,
+        "LAT": 34.00853465714749,
+        "LNG": -117.74058477634475
+    },
+    {
+        "H3": "8829a0af07fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 5,
+        "RESIDENTS": 1,
+        "SHOPPERS": 1,
+        "LAT": 33.99960989999815,
+        "LNG": -117.7057258710053
+    },
+    {
+        "H3": "8829a0af37fffff",
+        "COMPETITORS": 2,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 2,
+        "SHOPPERS": 0,
+        "LAT": 34.02283256208214,
+        "LNG": -117.70604206391381
+    },
+    {
+        "H3": "8829a0ac35fffff",
+        "COMPETITORS": 11,
+        "STUDENTS": 8,
+        "WORKERS": 4,
+        "RESIDENTS": 5,
+        "SHOPPERS": 2,
+        "LAT": 34.061395857367785,
+        "LNG": -117.74827142691146
+    },
+    {
+        "H3": "8829a0acedfffff",
+        "COMPETITORS": 2,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 1,
+        "SHOPPERS": 2,
+        "LAT": 34.06387765567658,
+        "LNG": -117.77610520725781
+    },
+    {
+        "H3": "8829a0af0bfffff",
+        "COMPETITORS": 1,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 2,
+        "SHOPPERS": 4,
+        "LAT": 33.989246860162936,
+        "LNG": -117.71947803054628
+    },
+    {
+        "H3": "8829a0ad4bfffff",
+        "COMPETITORS": 4,
+        "STUDENTS": 0,
+        "WORKERS": 3,
+        "RESIDENTS": 1,
+        "SHOPPERS": 3,
+        "LAT": 34.02479812592979,
+        "LNG": -117.69564507979634
+    },
+    {
+        "H3": "8829a0ad29fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 1,
+        "SHOPPERS": 0,
+        "LAT": 34.05391074945652,
+        "LNG": -117.6647568201491
+    },
+    {
+        "H3": "8829a0ad1bfffff",
+        "COMPETITORS": 3,
+        "STUDENTS": 5,
+        "WORKERS": 0,
+        "RESIDENTS": 1,
+        "SHOPPERS": 2,
+        "LAT": 34.058907440827646,
+        "LNG": -117.72043542702595
+    },
+    {
+        "H3": "8829a0adc5fffff",
+        "COMPETITORS": 3,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 3,
+        "SHOPPERS": 1,
+        "LAT": 34.073727820333666,
+        "LNG": -117.72411510460884
+    },
+    {
+        "H3": "8829a1d861fffff",
+        "COMPETITORS": 2,
+        "STUDENTS": 1,
+        "WORKERS": 1,
+        "RESIDENTS": 2,
+        "SHOPPERS": 4,
+        "LAT": 34.10137159803203,
+        "LNG": -117.90520937584841
+    },
+    {
+        "H3": "8829a1d903fffff",
+        "COMPETITORS": 5,
+        "STUDENTS": 0,
+        "WORKERS": 5,
+        "RESIDENTS": 3,
+        "SHOPPERS": 5,
+        "LAT": 34.132495784187775,
+        "LNG": -117.86398739319651
+    },
+    {
+        "H3": "8829a0ada5fffff",
+        "COMPETITORS": 2,
+        "STUDENTS": 0,
+        "WORKERS": 6,
+        "RESIDENTS": 2,
+        "SHOPPERS": 2,
+        "LAT": 34.109266994112474,
+        "LNG": -117.70026609678409
+    },
+    {
+        "H3": "8829a0328bfffff",
+        "COMPETITORS": 1,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 1,
+        "SHOPPERS": 0,
+        "LAT": 34.1067711249933,
+        "LNG": -117.67241329530721
+    },
+    {
+        "H3": "8829a0ad23fffff",
+        "COMPETITORS": 1,
+        "STUDENTS": 0,
+        "WORKERS": 2,
+        "RESIDENTS": 1,
+        "SHOPPERS": 0,
+        "LAT": 34.068735080834664,
+        "LNG": -117.66842985574061
+    },
+    {
+        "H3": "8829a0ad85fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 2,
+        "WORKERS": 3,
+        "RESIDENTS": 1,
+        "SHOPPERS": 2,
+        "LAT": 34.09693963759316,
+        "LNG": -117.72443530298759
+    },
+    {
+        "H3": "8829a032ddfffff",
+        "COMPETITORS": 5,
+        "STUDENTS": 1,
+        "WORKERS": 1,
+        "RESIDENTS": 2,
+        "SHOPPERS": 1,
+        "LAT": 34.0899863622084,
+        "LNG": -117.67914349291998
+    },
+    {
+        "H3": "8829a1d915fffff",
+        "COMPETITORS": 5,
+        "STUDENTS": 0,
+        "WORKERS": 3,
+        "RESIDENTS": 7,
+        "SHOPPERS": 5,
+        "LAT": 34.13890806004,
+        "LNG": -117.8710351574014
+    },
+    {
+        "H3": "8829a0ad95fffff",
+        "COMPETITORS": 3,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 3,
+        "SHOPPERS": 1,
+        "LAT": 34.10781704096905,
+        "LNG": -117.74892185761519
+    },
+    {
+        "H3": "8829a0a507fffff",
+        "COMPETITORS": 1,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 33.972011820195405,
+        "LNG": -117.85116465086112
+    },
+    {
+        "H3": "8829a0a52bfffff",
+        "COMPETITORS": 2,
+        "STUDENTS": 0,
+        "WORKERS": 5,
+        "RESIDENTS": 3,
+        "SHOPPERS": 1,
+        "LAT": 33.97398832895867,
+        "LNG": -117.840781697042
+    },
+    {
+        "H3": "8829a0a537fffff",
+        "COMPETITORS": 2,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 0,
+        "SHOPPERS": 1,
+        "LAT": 33.99523017423864,
+        "LNG": -117.8515107481051
+    },
+    {
+        "H3": "8829a0a5bdfffff",
+        "COMPETITORS": 1,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 3,
+        "SHOPPERS": 0,
+        "LAT": 34.02534282363332,
+        "LNG": -117.89709547411748
+    },
+    {
+        "H3": "8829a1d86dfffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.09495979244927,
+        "LNG": -117.89816310812344
+    },
+    {
+        "H3": "8829a0a5abfffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.01892644719783,
+        "LNG": -117.89005420769078
+    },
+    {
+        "H3": "8829a1db37fffff",
+        "COMPETITORS": 4,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 2,
+        "SHOPPERS": 0,
+        "LAT": 34.09892249933926,
+        "LNG": -117.8773795644831
+    },
+    {
+        "H3": "8829a1db6dfffff",
+        "COMPETITORS": 1,
+        "STUDENTS": 2,
+        "WORKERS": 0,
+        "RESIDENTS": 1,
+        "SHOPPERS": 1,
+        "LAT": 34.0500535961358,
+        "LNG": -117.84885560398814
+    },
+    {
+        "H3": "8829a0add5fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 1,
+        "WORKERS": 3,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.08460800563191,
+        "LNG": -117.74859657491915
+    },
+    {
+        "H3": "8829a1d867fffff",
+        "COMPETITORS": 6,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 6,
+        "SHOPPERS": 0,
+        "LAT": 34.109765596798745,
+        "LNG": -117.90186460527777
+    },
+    {
+        "H3": "8829a0af03fffff",
+        "COMPETITORS": 6,
+        "STUDENTS": 0,
+        "WORKERS": 7,
+        "RESIDENTS": 2,
+        "SHOPPERS": 9,
+        "LAT": 33.997643833423,
+        "LNG": -117.71611987068853
+    },
+    {
+        "H3": "8829a1d941fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 3,
+        "RESIDENTS": 0,
+        "SHOPPERS": 2,
+        "LAT": 34.102881988390095,
+        "LNG": -117.85659259202724
+    },
+    {
+        "H3": "8829a0364bfffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 1,
+        "SHOPPERS": 0,
+        "LAT": 34.1147411253231,
+        "LNG": -117.79421114804173
+    },
+    {
+        "H3": "8829a0ad41fffff",
+        "COMPETITORS": 6,
+        "STUDENTS": 0,
+        "WORKERS": 13,
+        "RESIDENTS": 1,
+        "SHOPPERS": 7,
+        "LAT": 34.026762883539135,
+        "LNG": -117.68524725026576
+    },
+    {
+        "H3": "8829a0ac2dfffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 2,
+        "RESIDENTS": 1,
+        "SHOPPERS": 0,
+        "LAT": 34.04211797845162,
+        "LNG": -117.72715409568106
+    },
+    {
+        "H3": "8829a0ac15fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 0,
+        "SHOPPERS": 1,
+        "LAT": 34.049059632808316,
+        "LNG": -117.77241981364469
+    },
+    {
+        "H3": "8829a1d96dfffff",
+        "COMPETITORS": 7,
+        "STUDENTS": 1,
+        "WORKERS": 3,
+        "RESIDENTS": 5,
+        "SHOPPERS": 8,
+        "LAT": 34.10881518344438,
+        "LNG": -117.82540571443288
+    },
+    {
+        "H3": "8829a0af23fffff",
+        "COMPETITORS": 3,
+        "STUDENTS": 1,
+        "WORKERS": 1,
+        "RESIDENTS": 1,
+        "SHOPPERS": 2,
+        "LAT": 34.00997143471873,
+        "LNG": -117.69197032206043
+    },
+    {
+        "H3": "8829a0ad11fffff",
+        "COMPETITORS": 2,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 3,
+        "SHOPPERS": 2,
+        "LAT": 34.06087458342012,
+        "LNG": -117.71003600521576
+    },
+    {
+        "H3": "8829a0ad35fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 0,
+        "SHOPPERS": 1,
+        "LAT": 34.07516467241904,
+        "LNG": -117.67546851157238
+    },
+    {
+        "H3": "8829a0ad45fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.02872683462322,
+        "LNG": -117.6748485759039
+    },
+    {
+        "H3": "8829a1d947fffff",
+        "COMPETITORS": 2,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 1,
+        "SHOPPERS": 1,
+        "LAT": 34.11127553035889,
+        "LNG": -117.85324338427296
+    },
+    {
+        "H3": "8829a0acbbfffff",
+        "COMPETITORS": 13,
+        "STUDENTS": 0,
+        "WORKERS": 2,
+        "RESIDENTS": 4,
+        "SHOPPERS": 7,
+        "LAT": 34.102398057855254,
+        "LNG": -117.818361023779
+    },
+    {
+        "H3": "8829a0ac45fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 2,
+        "SHOPPERS": 2,
+        "LAT": 34.0149622500527,
+        "LNG": -117.74762153462667
+    },
+    {
+        "H3": "8829a0ad87fffff",
+        "COMPETITORS": 6,
+        "STUDENTS": 0,
+        "WORKERS": 2,
+        "RESIDENTS": 1,
+        "SHOPPERS": 1,
+        "LAT": 34.10336375915071,
+        "LNG": -117.73147720824879
+    },
+    {
+        "H3": "8829a0ad9dfffff",
+        "COMPETITORS": 1,
+        "STUDENTS": 0,
+        "WORKERS": 3,
+        "RESIDENTS": 0,
+        "SHOPPERS": 5,
+        "LAT": 34.09942422961824,
+        "LNG": -117.75228037330454
+    },
+    {
+        "H3": "8829a0aecbfffff",
+        "COMPETITORS": 3,
+        "STUDENTS": 1,
+        "WORKERS": 12,
+        "RESIDENTS": 2,
+        "SHOPPERS": 5,
+        "LAT": 33.99720699520971,
+        "LNG": -117.8411256606868
+    },
+    {
+        "H3": "8829a0acd7fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 3,
+        "RESIDENTS": 0,
+        "SHOPPERS": 2,
+        "LAT": 34.07721611554579,
+        "LNG": -117.8284156307607
+    },
+    {
+        "H3": "8829a1db0bfffff",
+        "COMPETITORS": 1,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.0653433490371,
+        "LNG": -117.89076287237445
+    },
+    {
+        "H3": "8829a0a5bbfffff",
+        "COMPETITORS": 6,
+        "STUDENTS": 0,
+        "WORKERS": 5,
+        "RESIDENTS": 4,
+        "SHOPPERS": 7,
+        "LAT": 34.02977610168545,
+        "LNG": -117.91452154368102
+    },
+    {
+        "H3": "8829a1d945fffff",
+        "COMPETITORS": 3,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 2,
+        "SHOPPERS": 3,
+        "LAT": 34.10486052550084,
+        "LNG": -117.84619782143862
+    },
+    {
+        "H3": "8829a0aee3fffff",
+        "COMPETITORS": 4,
+        "STUDENTS": 0,
+        "WORKERS": 7,
+        "RESIDENTS": 3,
+        "SHOPPERS": 5,
+        "LAT": 34.01795254389789,
+        "LNG": -117.8136535155972
+    },
+    {
+        "H3": "8829a0a5ebfffff",
+        "COMPETITORS": 1,
+        "STUDENTS": 0,
+        "WORKERS": 7,
+        "RESIDENTS": 2,
+        "SHOPPERS": 5,
+        "LAT": 33.99571335520646,
+        "LNG": -117.88970009520932
+    },
+    {
+        "H3": "8829a0a505fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 3,
+        "RESIDENTS": 1,
+        "SHOPPERS": 0,
+        "LAT": 33.96558937656226,
+        "LNG": -117.84412791652234
+    },
+    {
+        "H3": "8829a0aeddfffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 2,
+        "RESIDENTS": 2,
+        "SHOPPERS": 3,
+        "LAT": 34.0036280044951,
+        "LNG": -117.84816430762153
+    },
+    {
+        "H3": "8829a1db5bfffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 1,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.052983304754044,
+        "LNG": -117.9148808803046
+    },
+    {
+        "H3": "8829a0ae9dfffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 1,
+        "WORKERS": 1,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.026842347570785,
+        "LNG": -117.84850988428609
+    },
+    {
+        "H3": "8829a1db2bfffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.077699161475344,
+        "LNG": -117.86663689057141
+    },
+    {
+        "H3": "8829a1db39fffff",
+        "COMPETITORS": 6,
+        "STUDENTS": 0,
+        "WORKERS": 3,
+        "RESIDENTS": 2,
+        "SHOPPERS": 3,
+        "LAT": 34.082133655674866,
+        "LNG": -117.88407232589445
+    },
+    {
+        "H3": "8829a0aed3fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 4,
+        "RESIDENTS": 1,
+        "SHOPPERS": 3,
+        "LAT": 34.01646750826161,
+        "LNG": -117.86224335597649
+    },
+    {
+        "H3": "8829a0ae81fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 1,
+        "SHOPPERS": 0,
+        "LAT": 34.02239890541223,
+        "LNG": -117.83108169087264
+    },
+    {
+        "H3": "8829a1db57fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 2,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.06336174188991,
+        "LNG": -117.90115108152914
+    },
+    {
+        "H3": "8829a0ac13fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.05351022068242,
+        "LNG": -117.78985442627902
+    },
+    {
+        "H3": "8829a0ac89fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 1,
+        "LAT": 34.07277288552645,
+        "LNG": -117.81097879997006
+    },
+    {
+        "H3": "8829a0ae89fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 2,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.01400196547613,
+        "LNG": -117.83443023429457
+    },
+    {
+        "H3": "8829a0ac27fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 2,
+        "SHOPPERS": 1,
+        "LAT": 34.0569394915144,
+        "LNG": -117.73083400144883
+    },
+    {
+        "H3": "8829a0ad6bfffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 1,
+        "WORKERS": 0,
+        "RESIDENTS": 1,
+        "SHOPPERS": 0,
+        "LAT": 34.03712184043461,
+        "LNG": -117.67148521261723
+    },
+    {
+        "H3": "8829a1db09fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 1,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.058928615771926,
+        "LNG": -117.88371924620549
+    },
+    {
+        "H3": "8829a0aeb3fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 5,
+        "WORKERS": 1,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.05203087496727,
+        "LNG": -117.83846524989883
+    },
+    {
+        "H3": "8829a0ace9fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 2,
+        "RESIDENTS": 2,
+        "SHOPPERS": 3,
+        "LAT": 34.06190520465535,
+        "LNG": -117.78650067791098
+    },
+    {
+        "H3": "8829a0acc7fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 1,
+        "SHOPPERS": 0,
+        "LAT": 34.06635283666675,
+        "LNG": -117.80393675519488
+    },
+    {
+        "H3": "8829a0af29fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 33.995143145950905,
+        "LNG": -117.68829647873449
+    },
+    {
+        "H3": "8829a0ad53fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.04408545713226,
+        "LNG": -117.71675666518556
+    },
+    {
+        "H3": "8829a0ad99fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 1,
+        "WORKERS": 0,
+        "RESIDENTS": 1,
+        "SHOPPERS": 2,
+        "LAT": 34.09745325384862,
+        "LNG": -117.76268068131094
+    },
+    {
+        "H3": "8829a0add7fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.09103104952718,
+        "LNG": -117.75563833386033
+    },
+    {
+        "H3": "8829a0365dfffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 1,
+        "SHOPPERS": 0,
+        "LAT": 34.12115932853704,
+        "LNG": -117.80125599320702
+    },
+    {
+        "H3": "8829a1d965fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 1,
+        "SHOPPERS": 2,
+        "LAT": 34.1172082276811,
+        "LNG": -117.82205351294105
+    },
+    {
+        "H3": "8829a1d929fffff",
+        "COMPETITORS": 1,
+        "STUDENTS": 2,
+        "WORKERS": 1,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.13003955081896,
+        "LNG": -117.83614554083671
+    },
+    {
+        "H3": "8829a0329dfffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 1,
+        "LAT": 34.113198441172536,
+        "LNG": -117.67945445334826
+    },
+    {
+        "H3": "8829a0ac07fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 2,
+        "RESIDENTS": 0,
+        "SHOPPERS": 2,
+        "LAT": 34.04460612366278,
+        "LNG": -117.75498523002517
+    },
+    {
+        "H3": "8829a0ad19fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 1,
+        "SHOPPERS": 1,
+        "LAT": 34.05248020395117,
+        "LNG": -117.713396612714
+    },
+    {
+        "H3": "8829a0ad59fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 1,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.02926187115571,
+        "LNG": -117.71307881877621
+    },
+    {
+        "H3": "8829a0ad0bfffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 0,
+        "SHOPPERS": 1,
+        "LAT": 34.04801799513939,
+        "LNG": -117.69595926393711
+    },
+    {
+        "H3": "8829a0acbdfffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 1,
+        "LAT": 34.09795493252598,
+        "LNG": -117.80091987269967
+    },
+    {
+        "H3": "8829a0ad83fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 1,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.101394398148315,
+        "LNG": -117.74187921542335
+    },
+    {
+        "H3": "8829a1d825fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 1,
+        "SHOPPERS": 1,
+        "LAT": 34.126552493962215,
+        "LNG": -117.89517340250204
+    },
+    {
+        "H3": "8829a0a89bfffff",
+        "COMPETITORS": 1,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.01389920416752,
+        "LNG": -117.67117610785616
+    },
+    {
+        "H3": "8829a1d863fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.107782561313805,
+        "LNG": -117.91225622779314
+    },
+    {
+        "H3": "8829a0adb1fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.118179314651385,
+        "LNG": -117.7351596349294
+    },
+    {
+        "H3": "8829a0ac99fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.08363384498936,
+        "LNG": -117.83545899208691
+    },
+    {
+        "H3": "8829a0a525fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 33.97793894165119,
+        "LNG": -117.82001323052755
+    },
+    {
+        "H3": "8829a0ace5fffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.07227210645131,
+        "LNG": -117.77274990789644
+    },
+    {
+        "H3": "8829a1db4bfffff",
+        "COMPETITORS": 0,
+        "STUDENTS": 0,
+        "WORKERS": 0,
+        "RESIDENTS": 0,
+        "SHOPPERS": 0,
+        "LAT": 34.04213644747501,
+        "LNG": -117.89040846671548
+    }
+]
