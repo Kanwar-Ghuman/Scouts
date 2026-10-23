@@ -15,3 +15,31 @@ model AiCache {
 
   @@map("ai_cache")
 }
+
+/// A Site Scout account. `weights` holds the owner's saved ModelWeights from onboarding.
+model User {
+  id           String    @id @default(cuid())
+  email        String    @unique
+  name         String
+  passwordHash String    @map("password_hash")
+  businessName String?   @map("business_name")
+  businessType String?   @map("business_type")
+  weights      Json?
+  onboardedAt  DateTime? @map("onboarded_at") @db.Timestamptz(6)
+  createdAt    DateTime  @default(now()) @map("created_at") @db.Timestamptz(6)
+  sessions     Session[]
+
+  @@map("users")
+}
+
+/// A login session. `id` is the SHA-256 of the cookie token, so a leaked table can't be replayed.
+model Session {
+  id        String   @id
+  userId    String   @map("user_id")
+  expiresAt DateTime @map("expires_at") @db.Timestamptz(6)
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@map("sessions")
+}
