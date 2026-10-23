@@ -1,9 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  cacheComponents: true,
-  partialPrefetching: true,
+  serverExternalPackages: ["snowflake-sdk"],
+  // Ship the offline data files with the API functions on Vercel
+  outputFileTracingIncludes: {
+    "/api/**": ["./data/**"],
+  },
   turbopack: {
     rules: {
       "*.css": {
