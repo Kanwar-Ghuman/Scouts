@@ -37,6 +37,8 @@ interface Props {
   compareB: string | null;
   labels: MapLabel[];
   competitors: Competitor[];
+  /** "Where to look" pin for the selected hex */
+  pin?: { lat: number; lng: number } | null;
   onSelect: (h3: string | null) => void;
   viewState: MapViewState;
   onViewStateChange: (v: MapViewState) => void;
@@ -55,7 +57,7 @@ const TOOLTIP_STYLE = {
 };
 
 export default function HexMap({
-  hexes, selectedH3, compareA, compareB, labels, competitors, onSelect, viewState, onViewStateChange,
+  hexes, selectedH3, compareA, compareB, labels, competitors, pin, onSelect, viewState, onViewStateChange,
 }: Props) {
   const focus = [selectedH3, compareA, compareB].filter(Boolean) as string[];
   const focusKey = focus.join();
@@ -111,8 +113,23 @@ export default function HexMap({
     getLineWidth: 2,
   });
 
+  const pinLayer = new ScatterplotLayer<{ lat: number; lng: number }>({
+    id: "look-pin",
+    data: pin ? [pin] : [],
+    pickable: true,
+    getPosition: (d) => [d.lng, d.lat],
+    getRadius: 9,
+    radiusUnits: "pixels",
+    getFillColor: [4, 120, 87, 255],
+    stroked: true,
+    getLineColor: [255, 255, 255, 255],
+    lineWidthUnits: "pixels",
+    getLineWidth: 3,
+  });
+
   const getTooltip = ({ object, layer }: PickingInfo) => {
     if (!object) return null;
+    if (layer?.id === "look-pin") return { text: "Start looking here", style: TOOLTIP_STYLE };
     if (layer?.id === "competitors") {
       return { text: (object as Competitor).name, style: TOOLTIP_STYLE };
     }
@@ -125,7 +142,7 @@ export default function HexMap({
       viewState={viewState}
       onViewStateChange={({ viewState: v }) => onViewStateChange(v as MapViewState)}
       controller={{ dragRotate: false }}
-      layers={[hexLayer, competitorLayer, labelLayer]}
+      layers={[hexLayer, competitorLayer, pinLayer, labelLayer]}
       getTooltip={getTooltip}
       getCursor={({ isHovering }) => (isHovering ? "pointer" : "grab")}
       onClick={(info) => {

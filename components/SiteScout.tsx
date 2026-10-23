@@ -22,6 +22,7 @@ import { customBusiness, fallbackPreset, presetBusiness } from "@/lib/business";
 import type { BusinessTypeKey } from "@/lib/businessTypes";
 import { DEFAULT_WEIGHTS, scoreAll } from "@/lib/model";
 import { readUrlState, writeUrlState } from "@/lib/urlState";
+import { demandCenter } from "@/lib/whereToLook";
 import { DEFAULT_VIEW, fitPoints, flyHome, flyTo } from "@/lib/viewport";
 import type { Account, Business, ModelWeights, PlaceResult, ScoredHex } from "@/types";
 
@@ -164,6 +165,9 @@ export default function SiteScout({ account }: { account: Account }) {
     }
   };
 
+  const selectedHex = showHexPanel && selectedH3 ? byH3.get(selectedH3) : undefined;
+  const lookPin = selectedHex && detail.data ? demandCenter(selectedHex, detail.data.driverPoints, weights) : null;
+
   const labels: MapLabel[] = [
     ...(A ? [{ text: "A" as const, lat: A.lat, lng: A.lng }] : []),
     ...(B ? [{ text: "B" as const, lat: B.lat, lng: B.lng }] : []),
@@ -215,6 +219,7 @@ export default function SiteScout({ account }: { account: Account }) {
         compareB={compareB}
         labels={labels}
         competitors={showHexPanel ? detail.data?.nearestCompetitors ?? [] : []}
+        pin={lookPin}
         onSelect={onSelect}
         viewState={viewState}
         onViewStateChange={setViewState}

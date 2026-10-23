@@ -3,12 +3,12 @@ import { isBusinessType, type BusinessTypeKey } from "@/lib/businessTypes";
 import { fallbackFeatures, loadOfflineFeatures } from "@/lib/mock";
 import { scoreAll } from "@/lib/model";
 import {
-  CATEGORIES_SQL, COMPETITORS_SQL, CUSTOM_COMPETITORS_SQL, CUSTOM_HEXES_SQL, DRIVERS_SQL, HEX_SQL, HEXES_SQL, SEARCH_SQL,
+  CATEGORIES_SQL, COMPETITORS_SQL, CUSTOM_COMPETITORS_SQL, CUSTOM_HEXES_SQL, DRIVER_POINTS_SQL, DRIVERS_SQL, HEX_SQL, HEXES_SQL, SEARCH_SQL,
 } from "@/lib/queries";
 import { query } from "@/lib/snowflake";
 import { validateCustomSpec } from "@/lib/validate";
 import type {
-  Business, Competitor, CustomSpec, DriverCount, DriverGroup, HexDetailResponse, HexFeatures, ModelWeights, PlaceResult,
+  Business, Competitor, CustomSpec, DriverCount, DriverGroup, DriverPoint, HexDetailResponse, HexFeatures, ModelWeights, PlaceResult,
   ScoredHex,
 } from "@/types";
 
@@ -53,6 +53,10 @@ function toDriverCount(r: Row): DriverCount {
   return { category: String(r.CATEGORY), group: String(r.DRIVER_GROUP) as DriverGroup, count: Number(r.N) };
 }
 
+function toDriverPoint(r: Row): DriverPoint {
+  return { lat: Number(r.LAT), lng: Number(r.LNG), group: String(r.DRIVER_GROUP) as DriverGroup };
+}
+
 function toPlace(r: Row): PlaceResult {
   return {
     name: String(r.NAME),
@@ -72,16 +76,18 @@ export async function getHexFeatures(type: BusinessTypeKey): Promise<HexFeatures
 }
 
 export async function getHexDetail(h3: string, type: BusinessTypeKey): Promise<HexDetailResponse | null> {
-  const [hexRows, compRows, driverRows] = await Promise.all([
+  const [hexRows, compRows, driverRows, pointRows] = await Promise.all([
     query<Row>(HEX_SQL, [type, h3]),
     query<Row>(COMPETITORS_SQL, [h3, type]),
     query<Row>(DRIVERS_SQL, [h3]),
+    query<Row>(DRIVER_POINTS_SQL, [h3]),
   ]);
   if (!hexRows.length) return null;
   return {
     features: toFeatures(hexRows[0]),
     nearestCompetitors: compRows.map(toCompetitor),
     driverBreakdown: driverRows.map(toDriverCount),
+    driverPoints: pointRows.map(toDriverPoint),
   };
 }
 
@@ -113,10 +119,11 @@ export async function getCustomFeatures(categories: string[]): Promise<HexFeatur
 
 export async function getCustomHexDetail(h3: string, custom: CustomSpec): Promise<HexDetailResponse | null> {
   const json = JSON.stringify(sortedCategories(custom));
-  const [features, compRows, driverRows] = await Promise.all([
+  const [features, compRows, driverRows, pointRows] = await Promise.all([
     getCustomFeatures(custom.categories),
     query<Row>(CUSTOM_COMPETITORS_SQL, [h3, json]),
     query<Row>(DRIVERS_SQL, [h3]),
+    query<Row>(DRIVER_POINTS_SQL, [h3]),
   ]);
   const row = features.find((f) => f.h3 === h3);
   if (!row) return null;
@@ -124,6 +131,7 @@ export async function getCustomHexDetail(h3: string, custom: CustomSpec): Promis
     features: row,
     nearestCompetitors: compRows.map(toCompetitor),
     driverBreakdown: driverRows.map(toDriverCount),
+    driverPoints: pointRows.map(toDriverPoint),
   };
 }
 

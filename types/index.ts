@@ -51,11 +51,14 @@ export interface ScoredHex extends HexFeatures {
 
 export interface Competitor { name: string; category: string; lat: number; lng: number; distanceM: number; }
 export interface DriverCount { category: string; group: DriverGroup; count: number; }
+/** One demand place inside a hex, used to pin where to look. */
+export interface DriverPoint { lat: number; lng: number; group: DriverGroup; }
 
 export interface HexDetailResponse {
   features: HexFeatures;
   nearestCompetitors: Competitor[];   // up to 5
   driverBreakdown: DriverCount[];     // up to 8
+  driverPoints?: DriverPoint[];       // demand places in the hex (missing in offline/mock data)
 }
 
 export type DataSource = "live" | "offline" | "mock";

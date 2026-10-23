@@ -66,3 +66,11 @@ FROM PLACES
 WHERE NAME ILIKE ?
 ORDER BY IFF(NAME ILIKE ?, 0, 1), LENGTH(NAME)
 LIMIT 8`;
+
+// binds: [h3] -> LAT, LNG, DRIVER_GROUP (demand places inside the hex, for the "where to look" pin)
+export const DRIVER_POINTS_SQL = `
+SELECT p.LAT, p.LNG, d.DRIVER_GROUP
+FROM PLACES p
+JOIN DRIVER_CATEGORIES d ON p.CATEGORY = d.CATEGORY
+WHERE p.H3 = ?
+LIMIT 300`;

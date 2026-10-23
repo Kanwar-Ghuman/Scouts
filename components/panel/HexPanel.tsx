@@ -9,9 +9,11 @@ import { DemandSources } from "@/components/panel/DemandSources";
 import { ScoreBadge } from "@/components/panel/ScoreBadge";
 import { ScoreBreakdown } from "@/components/panel/ScoreBreakdown";
 import { VerdictCard } from "@/components/panel/VerdictCard";
+import { WhereToLook } from "@/components/panel/WhereToLook";
 import { businessLabel } from "@/lib/business";
 import { scoreLabel } from "@/lib/model";
 import { reportUrl } from "@/lib/urlState";
+import { demandCenter } from "@/lib/whereToLook";
 import type { Business, HexDetailResponse, ModelWeights, ScoredHex } from "@/types";
 
 interface Props {
@@ -80,6 +82,7 @@ export function HexPanel({ hex, total, business, ownerName, weights, detail, det
       )}
       {detail && (
         <>
+          <WhereToLook spot={demandCenter(hex, detail.driverPoints, weights)} />
           <DemandSources rows={detail.driverBreakdown} />
           <CompetitorList rows={detail.nearestCompetitors} />
         </>
