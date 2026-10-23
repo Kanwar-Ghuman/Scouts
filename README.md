@@ -6,7 +6,7 @@
 
 **The model decides. The LLM explains.**
 
-**Live app:** https://site-scout-peach.vercel.app (sign up, then pick your business)
+**Live app:** https://site-scout-demo.vercel.app (sign up, then pick your business)
 
 Built at Bronco MiniHacks 2026 by Kanwar Ghuman and Sirui Wang. Tracks: Local Businesses, Best Use of Snowflake, Best Open-Source AI Project.
 
