@@ -12,10 +12,11 @@ Built at Bronco MiniHacks 2026 by Kanwar Ghuman and Sirui Wang. Tracks: Local Bu
 
 ## What it does
 
-- **Sign up and onboard.** Pick your business type (boba/coffee, barber/salon, laundromat, gym, taco/fast casual) and set your priorities. They're saved to your account, so the map opens ready for you.
+- **Sign up and onboard.** Name your business, pick its type (boba/coffee, barber/salon, laundromat, gym, taco/fast casual) and set your priorities. They're saved to your account, so the map opens ready for you, and your business name shows on the map and in your reports.
 - **Score map.** Every ~0.7 km² hexagon gets a 0 to 100 score. Sliders change what matters and the map rescores instantly in the browser.
 - **Why this score.** Click a hex to see the exact math, the places that drive demand there, the nearest competitors, and a plain-English explanation.
-- **Describe your business in plain English.** The LLM turns a sentence into a business type and starting weights. A keyword fallback runs if the LLM is unavailable.
+- **Where to look.** A pin marks the center of the hex's demand places (schools, offices, stores), weighted by your priorities, so it moves when you change them. From the pin, open real **retail listings for lease** in that city on LoopNet, with rent per square foot, or find **commercial real estate brokers near the pin** on Google Maps. Site Scout has no lease data of its own, so it hands you to real listings instead of inventing them.
+- **Any business, in plain English.** Describe your business and the LLM turns it into a type and starting weights. If it isn't one of the five presets (say, a pet groomer), Llama names it and picks its competitor categories from Overture's real category list. The code checks every category against the data, so none are invented, and Snowflake counts those competitors per hex live. Custom businesses need Snowflake; presets also work offline, and a keyword fallback runs if the LLM is unavailable.
 - **Compare two spots.** The code picks the winner; the LLM explains the tradeoff.
 - **Search and report.** Search a place you know and download a one-page report to bring to a landlord or lender.
 
@@ -46,6 +47,7 @@ EVERY REQUEST, IN THE APP
 Next.js API routes (Snowflake via key-pair auth) → lib/model.ts scores in the browser
   → deck.gl H3HexagonLayer on MapLibre + CARTO Positron basemap
   → click → Llama 3.3 70B via Snowflake Cortex AI_COMPLETE explains → cached in Neon Postgres
+  → custom business: Llama picks competitor categories → checked against PLACES → counted per hex live in Snowflake
 ```
 
 - **Snowflake:** the Marketplace dataset, geospatial (`ST_DWITHIN`) and H3 functions, and **Cortex `AI_COMPLETE`**, so the open-weight model runs inside Snowflake, next to the data.
@@ -53,7 +55,7 @@ Next.js API routes (Snowflake via key-pair auth) → lib/model.ts scores in the 
 
   ![CoCo writing and running SQL on Overture Maps Places: the 15 most common categories within 12 km of Cal Poly Pomona](docs/coco.png)
 - **Reliability:** if Snowflake is unreachable the app serves exported data from [`data/`](data/). It retries dropped connections, rate-limits LLM routes (20 requests per minute per IP), and caches every LLM result.
-- **Accounts:** email and password (hashed with Node's built-in scrypt), with database-backed sessions in an httpOnly cookie. Tables `users` and `sessions` live in Neon. The map requires an account unless `MOCK_MODE=true`.
+- **Accounts:** email and password (hashed with Node's built-in scrypt), with database-backed sessions in an httpOnly cookie. Tables `users` and `sessions` live in Neon. Every page requires a signed-in, onboarded account, so accounts need Postgres even in `MOCK_MODE`.
 
 ## Open-weight AI
 
@@ -85,13 +87,14 @@ Next.js API routes (Snowflake via key-pair auth) → lib/model.ts scores in the 
 5. **Postgres tables:** `npm run db:migrate`. On networks that block port 5432, use `npm run db:migrate:https`. If Prisma reports `P3005` because the tables were created by the HTTPS script, mark the earlier migration as applied first: `npx prisma migrate resolve --applied 20261023190000_init_ai_cache`.
 6. `npm run dev` and open http://localhost:3000.
 
-**No Snowflake or Postgres?** Set `MOCK_MODE=true`. The map runs on the exported data in `data/`, the LLM features fall back to simple rules, and the login gate is off.
+**No Snowflake?** Set `MOCK_MODE=true`. The map runs on the exported data in `data/`, and the LLM features fall back to simple rules. You still need `DATABASE_URL` to sign in.
 
 ## Limitations
 
 - Counts come from Overture's places data, which isn't complete. Apartments in particular are sparse, so "residents" is a rough proxy.
 - Competitors are counted only inside each hex, not its neighbors, so a competitor just across a hex boundary doesn't count against the next hex.
-- No rent, real foot traffic, demographics or zoning yet. Next layers: Census demographics, rent as a cost penalty, and a saved owner report.
+- Site Scout has no lease data. The LoopNet link searches the whole nearest city (picked by the closest city center, so it can guess the neighboring city near borders), not the exact pin.
+- No real foot traffic, demographics or zoning yet, and rent isn't part of the score. Next: Census demographics, rent as a cost penalty, and saved spots with alerts when a competitor opens nearby.
 
 ## Logo files
 
