@@ -1,11 +1,11 @@
-import { getSql } from "@/lib/db";
+import { getDb } from "@/lib/db";
 
 export async function getCached(key: string): Promise<string | null> {
-  const sql = getSql();
-  if (!sql) return null;
+  const db = getDb();
+  if (!db) return null;
   try {
-    const rows = (await sql`SELECT text FROM ai_cache WHERE cache_key = ${key} LIMIT 1`) as { text: string }[];
-    return rows[0]?.text ?? null;
+    const row = await db.aiCache.findUnique({ where: { cacheKey: key }, select: { text: true } });
+    return row?.text ?? null;
   } catch (err) {
     console.error("[aiCache] read failed", err);
     return null;
@@ -13,10 +13,10 @@ export async function getCached(key: string): Promise<string | null> {
 }
 
 export async function setCached(key: string, text: string): Promise<void> {
-  const sql = getSql();
-  if (!sql) return;
+  const db = getDb();
+  if (!db) return;
   try {
-    await sql`INSERT INTO ai_cache (cache_key, text) VALUES (${key}, ${text}) ON CONFLICT (cache_key) DO NOTHING`;
+    await db.aiCache.createMany({ data: [{ cacheKey: key, text }], skipDuplicates: true });
   } catch (err) {
     console.error("[aiCache] write failed", err);
   }

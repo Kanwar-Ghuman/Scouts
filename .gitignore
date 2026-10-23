@@ -41,3 +41,7 @@ yarn-error.log*
 next-env.d.ts
 *.p8
 *.p8
+
+# prisma
+/lib/generated/
+/public/maplibre-gl-worker.mjs

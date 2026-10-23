@@ -1,0 +1,17 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../lib/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+/// LLM text cache. Keys: v1:verdict:{type}:{h3}:{modelKey} and v1:compare:{type}:{a}:{b}:{modelKey}
+model AiCache {
+  cacheKey  String   @id @map("cache_key")
+  text      String
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  @@map("ai_cache")
+}

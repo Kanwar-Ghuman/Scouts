@@ -4,9 +4,13 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "prisma generate && next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "postinstall": "prisma generate && node scripts/copy-maplibre-worker.mjs",
+    "db:migrate": "prisma migrate deploy",
+    "db:migrate:https": "node scripts/db-push-https.mjs",
+    "db:studio": "prisma studio"
   },
   "dependencies": {
     "@base-ui/react": "^1.9.0",
@@ -15,6 +19,8 @@
     "@deck.gl/layers": "^9.4.0",
     "@deck.gl/react": "^9.4.0",
     "@neondatabase/serverless": "^1.2.0",
+    "@prisma/adapter-neon": "^7.10.1",
+    "@prisma/client": "^7.10.1",
     "class-variance-authority": "^0.7.1",
     "cmdk": "^1.1.1",
     "cn": "^0.5.0",
@@ -36,8 +42,10 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "dotenv": "^18.0.9",
     "eslint": "^9",
     "eslint-config-next": "16.4.3",
+    "prisma": "^7.10.1",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
