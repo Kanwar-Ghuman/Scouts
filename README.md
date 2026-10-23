@@ -6,6 +6,8 @@
 
 **The model decides. The LLM explains.**
 
+**Live app:** https://site-scout-peach.vercel.app (sign up, then pick your business)
+
 Built at Bronco MiniHacks 2026 by Kanwar Ghuman and Sirui Wang. Tracks: Local Businesses, Best Use of Snowflake, Best Open-Source AI Project.
 
 ![Site Scout: a boba spot on the Cal Poly Pomona campus, with the score, the exact math, and Llama 3.3's explanation](docs/screenshot.png)
