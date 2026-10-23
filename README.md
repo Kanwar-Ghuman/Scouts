@@ -2,7 +2,7 @@
 
 ![Site Scout](public/sitescout_twotone.svg)
 
-A location decision model for small businesses in the Pomona, CA area. The LLM generates. The model decides. The LLM explains.
+A location decision model for small businesses in a given area. The LLM generates. The model decides. The LLM explains.
 
 ## What it does
 - Describe your business in plain English. An open-weight LLM turns it into model settings.
