@@ -3,12 +3,12 @@
 import { Badge } from "@/components/ui/badge";
 import { Slider } from "@/components/ui/slider";
 import { SectionLabel } from "@/components/panel/SectionLabel";
-import { BUSINESS_TYPES, type BusinessTypeKey } from "@/lib/businessTypes";
+import { businessShort } from "@/lib/business";
 import { DRIVER_GROUPS, WEIGHT_MAX, WEIGHT_MIN, WEIGHT_STEP, isDefault, weightWord } from "@/lib/model";
-import type { ModelWeights } from "@/types";
+import type { Business, ModelWeights } from "@/types";
 
 interface Props {
-  type: BusinessTypeKey;
+  business: Business;
   weights: ModelWeights;
   onChange: (w: ModelWeights) => void;
   onReset: () => void;
@@ -19,8 +19,8 @@ const ROWS: { key: keyof ModelWeights; label: string; hint: string }[] = [
   { key: "competition", label: "Avoid competition", hint: "Penalty per similar business in the area" },
 ];
 
-export function PriorityControls({ type, weights, onChange, onReset }: Props) {
-  const custom = !isDefault(weights, type);
+export function PriorityControls({ business, weights, onChange, onReset }: Props) {
+  const custom = !isDefault(weights, business.type);
   return (
     <section className="flex flex-col gap-1">
       <div className="flex h-5 items-center justify-between">
@@ -54,7 +54,7 @@ export function PriorityControls({ type, weights, onChange, onReset }: Props) {
           onClick={onReset}
           className="self-start text-xs font-medium text-emerald-700 hover:underline"
         >
-          Reset to {BUSINESS_TYPES[type].short.toLowerCase()} defaults
+          Reset to {business.type === "custom" ? "custom" : businessShort(business).toLowerCase()} defaults
         </button>
       )}
     </section>

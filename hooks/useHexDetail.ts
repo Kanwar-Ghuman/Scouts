@@ -1,8 +1,8 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-import type { BusinessTypeKey } from "@/lib/businessTypes";
-import type { HexDetailResponse } from "@/types";
+import { businessKey, businessParams } from "@/lib/business";
+import type { Business, HexDetailResponse } from "@/types";
 import { fetchJson, HttpError, isAbort } from "@/hooks/fetchJson";
 
 interface State {
@@ -11,24 +11,24 @@ interface State {
   error: string | null;
 }
 
-export function useHexDetail(h3: string | null, type: BusinessTypeKey) {
-  const key = h3 ? `${type}:${h3}` : null;
+export function useHexDetail(h3: string | null, business: Business) {
+  const key = h3 ? `${businessKey(business)}:${h3}` : null;
+  const query = businessParams(business).toString();
   const [state, setState] = useState<State>({ key: null, data: null, error: null });
   const [attempt, setAttempt] = useState(0);
 
   useEffect(() => {
-    if (!h3) return;
+    if (!h3 || !key) return;
     const ctrl = new AbortController();
-    const k = `${type}:${h3}`;
-    fetchJson<HexDetailResponse>(`/api/hex/${h3}?type=${type}`, { signal: ctrl.signal })
-      .then((data) => setState({ key: k, data, error: null }))
+    fetchJson<HexDetailResponse>(`/api/hex/${h3}?${query}`, { signal: ctrl.signal })
+      .then((data) => setState({ key, data, error: null }))
       .catch((err) => {
         if (isAbort(err)) return;
         const error = err instanceof HttpError && err.status === 404 ? "not_found" : (err as Error).message;
-        setState({ key: k, data: null, error });
+        setState({ key, data: null, error });
       });
     return () => ctrl.abort();
-  }, [h3, type, attempt]);
+  }, [h3, key, query, attempt]);
 
   const retry = useCallback(() => {
     setState((s) => ({ ...s, key: null }));

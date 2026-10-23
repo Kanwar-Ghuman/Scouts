@@ -9,15 +9,15 @@ import { DemandSources } from "@/components/panel/DemandSources";
 import { ScoreBadge } from "@/components/panel/ScoreBadge";
 import { ScoreBreakdown } from "@/components/panel/ScoreBreakdown";
 import { VerdictCard } from "@/components/panel/VerdictCard";
-import { BUSINESS_TYPES, type BusinessTypeKey } from "@/lib/businessTypes";
+import { businessLabel } from "@/lib/business";
 import { scoreLabel } from "@/lib/model";
 import { reportUrl } from "@/lib/urlState";
-import type { HexDetailResponse, ModelWeights, ScoredHex } from "@/types";
+import type { Business, HexDetailResponse, ModelWeights, ScoredHex } from "@/types";
 
 interface Props {
   hex: ScoredHex | null;
   total: number;
-  type: BusinessTypeKey;
+  business: Business;
   weights: ModelWeights;
   detail: HexDetailResponse | null;
   detailLoading: boolean;
@@ -35,7 +35,7 @@ function CloseButton({ onClose }: { onClose: () => void }) {
   );
 }
 
-export function HexPanel({ hex, total, type, weights, detail, detailLoading, detailError, onRetry, onClose, onCompare }: Props) {
+export function HexPanel({ hex, total, business, weights, detail, detailLoading, detailError, onRetry, onClose, onCompare }: Props) {
   if (!hex) {
     return (
       <div className="flex flex-col gap-3 p-5">
@@ -54,13 +54,13 @@ export function HexPanel({ hex, total, type, weights, detail, detailLoading, det
         <div className="min-w-0 flex-1">
           <h2 className="text-xl font-semibold text-zinc-900">{scoreLabel(hex.score)} spot</h2>
           <p className="text-sm text-zinc-500 tabular-nums">
-            Rank #{hex.rank} of {total} for a {BUSINESS_TYPES[type].label.toLowerCase()}
+            Rank #{hex.rank} of {total} for a {businessLabel(business).toLowerCase()}
           </p>
         </div>
         <CloseButton onClose={onClose} />
       </header>
 
-      <VerdictCard h3={hex.h3} type={type} weights={weights} />
+      <VerdictCard h3={hex.h3} business={business} weights={weights} />
       <ScoreBreakdown hex={hex} weights={weights} total={total} />
       <Separator />
 
@@ -92,7 +92,7 @@ export function HexPanel({ hex, total, type, weights, detail, detailLoading, det
         <Button
           variant="outline"
           className="h-9"
-          onClick={() => window.open(reportUrl(type, weights, hex.h3), "_blank", "noopener")}
+          onClick={() => window.open(reportUrl(business, weights, hex.h3), "_blank", "noopener")}
         >
           <FileText />
           Download report

@@ -13,10 +13,10 @@ import { TopSpots } from "@/components/panel/TopSpots";
 import { TypeSelect } from "@/components/panel/TypeSelect";
 import type { BusinessTypeKey } from "@/lib/businessTypes";
 import { cn } from "@/lib/utils";
-import type { ModelWeights, PlanResponse, ScoredHex } from "@/types";
+import type { Business, ModelWeights, PlanResponse, ScoredHex } from "@/types";
 
 interface Props {
-  type: BusinessTypeKey;
+  business: Business;
   weights: ModelWeights;
   scored: ScoredHex[];
   selectedH3: string | null;
@@ -42,7 +42,7 @@ async function copyLink() {
 }
 
 export function ControlPanel(props: Props) {
-  const { type, weights, scored, loading, error } = props;
+  const { business, weights, scored, loading, error } = props;
   const [open, setOpen] = useState(false);
   const strong = scored.filter((h) => h.score >= 70).length;
 
@@ -74,9 +74,9 @@ export function ControlPanel(props: Props) {
         </button>
 
         <div className={cn("flex-col gap-4", open ? "flex" : "hidden md:flex")}>
-          <TypeSelect value={type} onChange={props.onTypeChange} />
+          <TypeSelect value={business} onChange={props.onTypeChange} />
           <Separator />
-          <PriorityControls type={type} weights={weights} onChange={props.onWeightsChange} onReset={props.onResetWeights} />
+          <PriorityControls business={business} weights={weights} onChange={props.onWeightsChange} onReset={props.onResetWeights} />
           <Separator />
           {error ? (
             <div className="flex items-center justify-between rounded-lg border border-zinc-200 bg-zinc-50 p-3">

@@ -11,7 +11,7 @@ import { ScoreBadge } from "@/components/panel/ScoreBadge";
 import { useHexDetail } from "@/hooks/useHexDetail";
 import { useHexFeatures } from "@/hooks/useHexFeatures";
 import { useVerdict } from "@/hooks/useVerdict";
-import { BUSINESS_TYPES } from "@/lib/businessTypes";
+import { businessLabel } from "@/lib/business";
 import { formatDistance, prettyCategory } from "@/lib/format";
 import { DRIVER_GROUPS, explainScore, scoreAll, scoreLabel, weightWord } from "@/lib/model";
 import { readUrlState, toQuery } from "@/lib/urlState";
@@ -27,15 +27,15 @@ function Section({ title, children }: { title: string; children: React.ReactNode
 
 export function OwnerReport() {
   const params = useSearchParams();
-  const { type, weights, hex: h3 } = readUrlState(new URLSearchParams(params.toString()));
-  const features = useHexFeatures(type);
-  const detail = useHexDetail(h3, type);
-  const verdict = useVerdict(h3, type, weights);
+  const { business, weights, hex: h3 } = readUrlState(new URLSearchParams(params.toString()));
+  const features = useHexFeatures(business);
+  const detail = useHexDetail(h3, business);
+  const verdict = useVerdict(h3, business, weights);
 
   const scored = useMemo(() => scoreAll(features.data ?? [], weights), [features.data, weights]);
   const hex = h3 ? scored.find((h) => h.h3 === h3) : undefined;
-  const label = BUSINESS_TYPES[type].label;
-  const mapUrl = `/?${toQuery({ type, weights, hex: h3, a: null, b: null })}`;
+  const label = businessLabel(business);
+  const mapUrl = `/?${toQuery({ business, weights, hex: h3, a: null, b: null })}`;
   const failed = !h3 || features.error || detail.error || (!features.loading && !hex);
 
   const actions = (

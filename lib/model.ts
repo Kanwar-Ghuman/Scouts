@@ -1,4 +1,4 @@
-import type { BusinessTypeKey } from "@/lib/businessTypes";
+import type { TypeKey } from "@/lib/businessTypes";
 import type { DriverGroup, HexFeatures, ModelWeights, ScoredHex } from "@/types";
 
 export const DRIVER_GROUPS: { key: DriverGroup; label: string; hint: string }[] = [
@@ -12,17 +12,18 @@ export const WEIGHT_MIN = 0;
 export const WEIGHT_MAX = 3;
 export const WEIGHT_STEP = 0.5;
 
-export const DEFAULT_WEIGHTS: Record<BusinessTypeKey, ModelWeights> = {
+export const DEFAULT_WEIGHTS: Record<TypeKey, ModelWeights> = {
   boba:       { students: 3, workers: 1, residents: 1, shoppers: 2,   competition: 1 },
   barber:     { students: 1, workers: 1, residents: 3, shoppers: 2,   competition: 1.5 },
   laundromat: { students: 2, workers: 0, residents: 3, shoppers: 1,   competition: 2 },
   gym:        { students: 2, workers: 2, residents: 2, shoppers: 0.5, competition: 1 },
   taco:       { students: 3, workers: 2, residents: 1, shoppers: 1,   competition: 0.5 },
+  custom:     { students: 1, workers: 1, residents: 1, shoppers: 1,   competition: 1 },
 };
 
 const WEIGHT_KEYS: (keyof ModelWeights)[] = ["students", "workers", "residents", "shoppers", "competition"];
 
-export function sanitizeWeights(input: unknown, type: BusinessTypeKey): ModelWeights {
+export function sanitizeWeights(input: unknown, type: TypeKey): ModelWeights {
   const base = DEFAULT_WEIGHTS[type];
   const obj = (input ?? {}) as Record<string, unknown>;
   const out = { ...base };
@@ -40,13 +41,13 @@ export function modelKey(w: ModelWeights): string {
   return WEIGHT_KEYS.map((k) => w[k]).join("-");
 }
 
-export function parseModelKey(key: string | null, type: BusinessTypeKey): ModelWeights {
+export function parseModelKey(key: string | null, type: TypeKey): ModelWeights {
   if (!key) return DEFAULT_WEIGHTS[type];
   const parts = key.split("-").map(Number);
   return sanitizeWeights(Object.fromEntries(WEIGHT_KEYS.map((k, i) => [k, parts[i]])), type);
 }
 
-export function isDefault(w: ModelWeights, type: BusinessTypeKey): boolean {
+export function isDefault(w: ModelWeights, type: TypeKey): boolean {
   return modelKey(w) === modelKey(DEFAULT_WEIGHTS[type]);
 }
 

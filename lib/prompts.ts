@@ -1,4 +1,4 @@
-import { BUSINESS_TYPES, type BusinessTypeKey } from "@/lib/businessTypes";
+import { BUSINESS_TYPE_KEYS, CUSTOM_CATEGORIES_MAX, CUSTOM_LABEL_MAX } from "@/lib/businessTypes";
 import { DRIVER_GROUPS, scoreLabel, weightWord } from "@/lib/model";
 import type { HexDetailResponse, ModelWeights, ScoredHex } from "@/types";
 
@@ -25,9 +25,8 @@ const RULES = [
 ];
 
 export function buildVerdictPrompt(
-  type: BusinessTypeKey, h: ScoredHex, total: number, w: ModelWeights, detail: HexDetailResponse
+  label: string, h: ScoredHex, total: number, w: ModelWeights, detail: HexDetailResponse
 ): string {
-  const label = BUSINESS_TYPES[type].label;
   const data = {
     business: label,
     ownerPriorities: priorities(w),
@@ -52,9 +51,8 @@ export function buildVerdictPrompt(
 }
 
 export function buildComparePrompt(
-  type: BusinessTypeKey, a: ScoredHex, b: ScoredHex, winnerLabel: "A" | "B", total: number, w: ModelWeights
+  label: string, a: ScoredHex, b: ScoredHex, winnerLabel: "A" | "B", total: number, w: ModelWeights
 ): string {
-  const label = BUSINESS_TYPES[type].label;
   const data = { business: label, ownerPriorities: priorities(w), spotA: spotData(a, total), spotB: spotData(b, total) };
   return [
     "A decision model compared two areas for someone opening a small business.",
@@ -72,21 +70,37 @@ export function buildComparePrompt(
   ].join("\n");
 }
 
-export function buildPlanPrompt(text: string): string {
+const WEIGHTS_SCHEMA =
+  '"weights": {"students": number|null, "workers": number|null, "residents": number|null, "shoppers": number|null, "competition": number|null}';
+
+/** With `categories`, the LLM may return a custom business whose competitors come only from that list. */
+export function buildPlanPrompt(text: string, categories: string[] | null): string {
+  const presets = BUSINESS_TYPE_KEYS.map((k) => `"${k}"`).join(" | ");
+  const typeRules = categories
+    ? [
+        `- type: use a preset ONLY when the business clearly is one: boba = boba, bubble tea, coffee or cafe; barber = barber or hair salon; laundromat = laundromat or dry cleaner; gym = gym, fitness, yoga or pilates; taco = tacos, burritos or Mexican fast casual.`,
+        `- Otherwise type is "custom". Then set "label" (a short name for the business, max ${CUSTOM_LABEL_MAX} characters) and "competitorCategories": 1 to ${CUSTOM_CATEGORIES_MAX} categories of places that compete with it, copied exactly from the category list below. Never invent a category.`,
+        '- For presets, set "label" and "competitorCategories" to null.',
+      ]
+    : ["- type: closest match. Coffee, tea and cafes are boba. Hair, nails and beauty are barber. Restaurants and food are taco. Fitness and yoga are gym."];
+  const schema = categories
+    ? `Schema: {"type": ${presets} | "custom", "label": string|null, "competitorCategories": string[]|null, ${WEIGHTS_SCHEMA}, "summary": string}`
+    : `Schema: {"type": ${presets}, ${WEIGHTS_SCHEMA}, "summary": string}`;
   return [
     "You convert a small business owner's description into settings for a location decision model.",
     "Return ONLY one JSON object. No markdown, no other text.",
     "",
-    'Schema: {"type": "boba" | "barber" | "laundromat" | "gym" | "taco", "weights": {"students": number|null, "workers": number|null, "residents": number|null, "shoppers": number|null, "competition": number|null}, "summary": string}',
+    schema,
     "",
     "Rules:",
-    "- type: closest match. Coffee, tea and cafes are boba. Hair, nails and beauty are barber. Restaurants and food are taco. Fitness and yoga are gym.",
+    ...typeRules,
     "- Weights are 0 to 3 in steps of 0.5. 0 = ignore, 1 = low, 2 = medium, 3 = very important.",
     "- students = colleges and schools. workers = offices and hospitals. residents = people living nearby. shoppers = malls and retail.",
     "- competition = how strongly to avoid areas that already have similar businesses.",
     "- Use null for anything the owner does not mention.",
     '- summary: one short sentence starting with "Looking for" that restates what they want.',
     "",
+    ...(categories ? ["Category list (place categories on the map):", categories.join(", "), ""] : []),
     "Owner's description:",
     JSON.stringify(text),
   ].join("\n");

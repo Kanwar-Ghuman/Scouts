@@ -1,11 +1,23 @@
-import type { BusinessTypeKey } from "@/lib/businessTypes";
+import { customBusiness, presetBusiness, sortedCategories } from "@/lib/business";
+import { isBusinessType, type BusinessTypeKey } from "@/lib/businessTypes";
 import { fallbackFeatures, loadOfflineFeatures } from "@/lib/mock";
 import { scoreAll } from "@/lib/model";
-import { COMPETITORS_SQL, DRIVERS_SQL, HEX_SQL, HEXES_SQL, SEARCH_SQL } from "@/lib/queries";
+import {
+  CATEGORIES_SQL, COMPETITORS_SQL, CUSTOM_COMPETITORS_SQL, CUSTOM_HEXES_SQL, DRIVERS_SQL, HEX_SQL, HEXES_SQL, SEARCH_SQL,
+} from "@/lib/queries";
 import { query } from "@/lib/snowflake";
+import { validateCustomSpec } from "@/lib/validate";
 import type {
-  Competitor, DriverCount, DriverGroup, HexDetailResponse, HexFeatures, ModelWeights, PlaceResult, ScoredHex,
+  Business, Competitor, CustomSpec, DriverCount, DriverGroup, HexDetailResponse, HexFeatures, ModelWeights, PlaceResult,
+  ScoredHex,
 } from "@/types";
+
+/** Custom businesses have no offline export, so they need Snowflake. Routes map this to 503. */
+export class CustomUnavailableError extends Error {
+  constructor(cause?: unknown) {
+    super("Custom businesses need a live connection", { cause });
+  }
+}
 
 type Row = Record<string, unknown>;
 
@@ -77,23 +89,93 @@ export async function searchPlaces(q: string): Promise<PlaceResult[]> {
   return (await query<Row>(SEARCH_SQL, [`%${q}%`, `${q}%`])).map(toPlace);
 }
 
+const CATEGORY_TTL_MS = 60 * 60 * 1000;
+let categoryCache: { at: number; list: string[]; set: Set<string> } | null = null;
+
+/** The 300 most common PLACES categories, cached for an hour. */
+export async function getCategoryList(): Promise<{ list: string[]; set: Set<string> }> {
+  if (categoryCache && Date.now() - categoryCache.at < CATEGORY_TTL_MS) return categoryCache;
+  const list = (await query<Row>(CATEGORIES_SQL)).map((r) => String(r.CATEGORY));
+  categoryCache = { at: Date.now(), list, set: new Set(list) };
+  return categoryCache;
+}
+
+const customCache = new Map<string, { at: number; rows: HexFeatures[] }>();
+
+export async function getCustomFeatures(categories: string[]): Promise<HexFeatures[]> {
+  const json = JSON.stringify([...categories].sort());
+  const hit = customCache.get(json);
+  if (hit && Date.now() - hit.at < TTL_MS) return hit.rows;
+  const rows = (await query<Row>(CUSTOM_HEXES_SQL, [json])).map(toFeatures);
+  customCache.set(json, { at: Date.now(), rows });
+  return rows;
+}
+
+export async function getCustomHexDetail(h3: string, custom: CustomSpec): Promise<HexDetailResponse | null> {
+  const json = JSON.stringify(sortedCategories(custom));
+  const [features, compRows, driverRows] = await Promise.all([
+    getCustomFeatures(custom.categories),
+    query<Row>(CUSTOM_COMPETITORS_SQL, [h3, json]),
+    query<Row>(DRIVERS_SQL, [h3]),
+  ]);
+  const row = features.find((f) => f.h3 === h3);
+  if (!row) return null;
+  return {
+    features: row,
+    nearestCompetitors: compRows.map(toCompetitor),
+    driverBreakdown: driverRows.map(toDriverCount),
+  };
+}
+
+/**
+ * Validates `type` plus an optional custom spec from a request.
+ * Presets resolve without I/O. Custom specs are checked against the live category list,
+ * so they throw CustomUnavailableError in mock mode or when Snowflake is down.
+ */
+export async function resolveBusiness(type: unknown, rawCustom: unknown): Promise<Business | null> {
+  if (isBusinessType(type)) return presetBusiness(type);
+  if (type !== "custom") return null;
+  if (isMock()) throw new CustomUnavailableError();
+  let known: Set<string>;
+  try {
+    known = (await getCategoryList()).set;
+  } catch (err) {
+    throw new CustomUnavailableError(err);
+  }
+  const spec = validateCustomSpec(rawCustom, known);
+  return spec ? customBusiness(spec) : null;
+}
+
+export function getBusinessDetail(h3: string, b: Business): Promise<HexDetailResponse | null> {
+  return b.type === "custom" && b.custom ? getCustomHexDetail(h3, b.custom) : getHexDetail(h3, b.type as BusinessTypeKey);
+}
+
 /** Scores every hex server-side. Never trusts client scores. */
 export async function getScoredPair(
-  type: BusinessTypeKey,
+  business: Business,
   weights: ModelWeights,
   h3s: string[]
 ): Promise<{ scored: ScoredHex[]; byH3: Map<string, ScoredHex>; offline: boolean }> {
   let features: HexFeatures[];
   let offline = false;
-  if (isMock()) {
-    features = fallbackFeatures(type);
-  } else {
+  if (business.type === "custom" && business.custom) {
     try {
-      features = await getHexFeatures(type);
+      features = await getCustomFeatures(business.custom.categories);
     } catch (err) {
-      console.error("[hexData] live features failed, using offline data", err);
-      features = loadOfflineFeatures(type) ?? [];
-      offline = true;
+      throw new CustomUnavailableError(err);
+    }
+  } else {
+    const type = business.type as BusinessTypeKey;
+    if (isMock()) {
+      features = fallbackFeatures(type);
+    } else {
+      try {
+        features = await getHexFeatures(type);
+      } catch (err) {
+        console.error("[hexData] live features failed, using offline data", err);
+        features = loadOfflineFeatures(type) ?? [];
+        offline = true;
+      }
     }
   }
   const scored = scoreAll(features, weights);

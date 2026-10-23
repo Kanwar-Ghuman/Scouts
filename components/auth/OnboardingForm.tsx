@@ -5,6 +5,7 @@ import { completeOnboarding, type OnboardingState } from "@/app/actions/auth";
 import { PriorityControls } from "@/components/panel/PriorityControls";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { presetBusiness } from "@/lib/business";
 import { BUSINESS_TYPE_KEYS, BUSINESS_TYPES, type BusinessTypeKey } from "@/lib/businessTypes";
 import { DEFAULT_WEIGHTS } from "@/lib/model";
 import { cn } from "@/lib/utils";
@@ -100,7 +101,7 @@ export function OnboardingForm({ name, initialBusinessName, initialType, initial
       ) : (
         <>
           <PriorityControls
-            type={type}
+            business={presetBusiness(type)}
             weights={weights}
             onChange={setWeights}
             onReset={() => setWeights(DEFAULT_WEIGHTS[type])}

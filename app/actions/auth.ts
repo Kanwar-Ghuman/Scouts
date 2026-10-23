@@ -3,6 +3,7 @@
 import { redirect } from "next/navigation";
 import { burnPasswordCheck, createSession, destroySession, getCurrentUser, hashPassword, verifyPassword } from "@/lib/auth";
 import { isBusinessType, type BusinessTypeKey } from "@/lib/businessTypes";
+import { presetBusiness } from "@/lib/business";
 import { getDb } from "@/lib/db";
 import { sanitizeWeights } from "@/lib/model";
 import { toQuery } from "@/lib/urlState";
@@ -19,7 +20,7 @@ const text = (formData: FormData, key: string) => String(formData.get(key) ?? ""
 /** Where to send a user after login: the map, opened on their saved business type and priorities. */
 function mapUrl(type: string | null, weights: unknown): string {
   if (!isBusinessType(type)) return "/";
-  return `/?${toQuery({ type, weights: sanitizeWeights(weights, type), hex: null, a: null, b: null })}`;
+  return `/?${toQuery({ business: presetBusiness(type), weights: sanitizeWeights(weights, type), hex: null, a: null, b: null })}`;
 }
 
 export async function signup(_prev: AuthState, formData: FormData): Promise<AuthState> {

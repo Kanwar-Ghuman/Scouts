@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Textarea } from "@/components/ui/textarea";
 import { SectionLabel } from "@/components/panel/SectionLabel";
+import { prettyCategory } from "@/lib/format";
 import type { PlanResponse } from "@/types";
 
 const EXAMPLES = [
@@ -80,6 +81,18 @@ export function IntentBox({ loading, error, plan, onSubmit }: Props) {
               ? "Llama set these priorities. The model picks the spots."
               : "Matched by keyword. Adjust the sliders below."}
           </p>
+          {plan.custom && (
+            <div className="mt-2.5 border-t border-zinc-100 pt-2.5">
+              <div className="flex flex-wrap gap-1">
+                {plan.custom.categories.map((c) => (
+                  <span key={c} className="rounded-md bg-zinc-100 px-1.5 py-0.5 text-[11px] font-medium text-zinc-700">
+                    {prettyCategory(c)}
+                  </span>
+                ))}
+              </div>
+              <p className="mt-1.5 text-[11px] text-zinc-500">Competitors chosen by Llama, checked against real map data.</p>
+            </div>
+          )}
         </div>
       )}
     </section>

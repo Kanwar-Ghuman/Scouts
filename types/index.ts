@@ -1,5 +1,17 @@
-import type { BusinessTypeKey } from "@/lib/businessTypes";
-export type { BusinessTypeKey };
+import type { BusinessTypeKey, TypeKey } from "@/lib/businessTypes";
+export type { BusinessTypeKey, TypeKey };
+
+/** A business that isn't one of the presets: a label plus the Overture categories that compete with it. */
+export interface CustomSpec {
+  label: string;          // max 40 chars
+  categories: string[];   // 1 to 6, each a real PLACES category
+}
+
+/** A preset (custom null) or a custom business (custom set). */
+export interface Business {
+  type: TypeKey;
+  custom: CustomSpec | null;
+}
 
 export type DriverGroup = "students" | "workers" | "residents" | "shoppers";
 
@@ -39,20 +51,21 @@ export interface HexDetailResponse {
 }
 
 export type DataSource = "live" | "offline" | "mock";
-export interface HexesResponse { type: BusinessTypeKey; hexes: HexFeatures[]; source: DataSource; }
+export interface HexesResponse { type: TypeKey; hexes: HexFeatures[]; source: DataSource; }
 
 export interface PlaceResult { name: string; category: string; lat: number; lng: number; h3: string; }
 export interface SearchResponse { results: PlaceResult[]; }
 
-export interface VerdictRequest { h3: string; type: BusinessTypeKey; weights: ModelWeights; }
+export interface VerdictRequest { h3: string; type: TypeKey; custom?: CustomSpec; weights: ModelWeights; }
 export interface VerdictResponse { verdict: string; cached: boolean; }
 
-export interface CompareRequest { a: string; b: string; type: BusinessTypeKey; weights: ModelWeights; }
+export interface CompareRequest { a: string; b: string; type: TypeKey; custom?: CustomSpec; weights: ModelWeights; }
 export interface CompareResponse { winner: string; explanation: string; cached: boolean; }
 
 export interface PlanRequest { text: string; }
 export interface PlanResponse {
-  type: BusinessTypeKey;
+  type: TypeKey;
+  custom?: CustomSpec;  // set when type is "custom"
   weights: ModelWeights;
   summary: string;      // one sentence: what the LLM understood
   fromLLM: boolean;     // false when the keyword fallback was used

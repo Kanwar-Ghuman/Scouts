@@ -18,11 +18,12 @@ import { StatusBadge } from "@/components/StatusBadge";
 import { useHexDetail } from "@/hooks/useHexDetail";
 import { useHexFeatures } from "@/hooks/useHexFeatures";
 import { usePlan } from "@/hooks/usePlan";
+import { customBusiness, fallbackPreset, presetBusiness } from "@/lib/business";
 import type { BusinessTypeKey } from "@/lib/businessTypes";
 import { DEFAULT_WEIGHTS, scoreAll } from "@/lib/model";
 import { readUrlState, writeUrlState } from "@/lib/urlState";
 import { DEFAULT_VIEW, fitPoints, flyHome, flyTo } from "@/lib/viewport";
-import type { ModelWeights, PlaceResult, ScoredHex } from "@/types";
+import type { Business, ModelWeights, PlaceResult, ScoredHex } from "@/types";
 
 const HexMap = dynamic(() => import("./map/HexMap"), {
   ssr: false,
@@ -40,7 +41,7 @@ export default function SiteScout() {
   const params = useSearchParams();
   const [init] = useState(() => readUrlState(new URLSearchParams(params.toString())));
 
-  const [type, setType] = useState<BusinessTypeKey>(init.type);
+  const [business, setBusiness] = useState<Business>(init.business);
   const [weights, setWeights] = useState<ModelWeights>(init.weights);
   const [selectedH3, setSelectedH3] = useState<string | null>(init.hex ?? init.a);
   const [compareA, setCompareA] = useState<string | null>(init.a && init.b ? init.a : null);
@@ -48,7 +49,11 @@ export default function SiteScout() {
   const [pickingB, setPickingB] = useState(false);
   const [viewState, setViewState] = useState<MapViewState>(() => initialView(init.hex, init.a, init.b));
 
-  const features = useHexFeatures(type);
+  const onCustomUnavailable = useCallback(() => {
+    toast.error("Custom businesses need a live connection");
+    setBusiness((b) => (b.type === "custom" ? presetBusiness(fallbackPreset(b)) : b));
+  }, []);
+  const features = useHexFeatures(business, onCustomUnavailable);
   const plan = usePlan();
 
   const scored = useMemo(() => scoreAll(features.data ?? [], weights), [features.data, weights]);
@@ -59,11 +64,11 @@ export default function SiteScout() {
   const comparing = !!(A && B);
   const showHexPanel = !comparing && !!selectedH3;
 
-  const detail = useHexDetail(showHexPanel ? selectedH3 : null, type);
+  const detail = useHexDetail(showHexPanel ? selectedH3 : null, business);
 
   useEffect(() => {
-    writeUrlState({ type, weights, hex: selectedH3, a: compareA, b: compareB });
-  }, [type, weights, selectedH3, compareA, compareB]);
+    writeUrlState({ business, weights, hex: selectedH3, a: compareA, b: compareB });
+  }, [business, weights, selectedH3, compareA, compareB]);
 
   const clearAll = useCallback(() => {
     setSelectedH3(null);
@@ -113,8 +118,8 @@ export default function SiteScout() {
   };
 
   const onTypeChange = (t: BusinessTypeKey) => {
-    if (t === type) return;
-    setType(t);
+    if (t === business.type) return;
+    setBusiness(presetBusiness(t));
     setWeights(DEFAULT_WEIGHTS[t]);
     clearAll();
   };
@@ -122,7 +127,7 @@ export default function SiteScout() {
   const onPlan = async (text: string) => {
     const res = await plan.run(text);
     if (!res) return;
-    setType(res.type);
+    setBusiness(res.type === "custom" && res.custom ? customBusiness(res.custom) : presetBusiness(res.type === "custom" ? "boba" : res.type));
     setWeights(res.weights);
     clearAll();
     setViewState(flyHome);
@@ -168,7 +173,7 @@ export default function SiteScout() {
     <ComparePanel
       a={A}
       b={B}
-      type={type}
+      business={business}
       weights={weights}
       onSwap={() => {
         setCompareA(compareB);
@@ -188,7 +193,7 @@ export default function SiteScout() {
         key={selectedH3}
         hex={byH3.get(selectedH3!) ?? null}
         total={scored.length}
-        type={type}
+        business={business}
         weights={weights}
         detail={detail.data}
         detailLoading={detail.loading}
@@ -216,7 +221,7 @@ export default function SiteScout() {
 
       <div className="pointer-events-none absolute inset-x-2 top-2 flex flex-col gap-2 md:contents">
         <ControlPanel
-          type={type}
+          business={business}
           weights={weights}
           scored={scored}
           selectedH3={selectedH3}
@@ -227,7 +232,7 @@ export default function SiteScout() {
           onPlan={onPlan}
           onTypeChange={onTypeChange}
           onWeightsChange={setWeights}
-          onResetWeights={() => setWeights(DEFAULT_WEIGHTS[type])}
+          onResetWeights={() => setWeights(DEFAULT_WEIGHTS[business.type])}
           onSelectSpot={onSelectSpot}
           onCompareSpot={onCompareSpot}
         />

@@ -1,37 +1,48 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
-import type { BusinessTypeKey } from "@/lib/businessTypes";
-import type { DataSource, HexesResponse, HexFeatures } from "@/types";
-import { fetchJson, isAbort } from "@/hooks/fetchJson";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { businessKey, businessParams } from "@/lib/business";
+import type { Business, DataSource, HexesResponse, HexFeatures } from "@/types";
+import { fetchJson, HttpError, isAbort } from "@/hooks/fetchJson";
 
 interface State {
-  type: BusinessTypeKey | null;
+  key: string | null;
   data: HexFeatures[] | null;
   source: DataSource | null;
   error: string | null;
 }
 
-export function useHexFeatures(type: BusinessTypeKey) {
-  const [state, setState] = useState<State>({ type: null, data: null, source: null, error: null });
+/** `onCustomUnavailable` fires when a custom business can't be loaded (it needs live Snowflake). */
+export function useHexFeatures(business: Business, onCustomUnavailable?: () => void) {
+  const key = businessKey(business);
+  const [state, setState] = useState<State>({ key: null, data: null, source: null, error: null });
   const [attempt, setAttempt] = useState(0);
+  const onUnavailableRef = useRef(onCustomUnavailable);
+  useEffect(() => {
+    onUnavailableRef.current = onCustomUnavailable;
+  });
+
+  const query = businessParams(business).toString();
+  const isCustom = business.type === "custom";
 
   useEffect(() => {
     const ctrl = new AbortController();
-    fetchJson<HexesResponse>(`/api/hexes?type=${type}`, { signal: ctrl.signal })
-      .then((r) => setState({ type, data: r.hexes, source: r.source, error: null }))
+    fetchJson<HexesResponse>(`/api/hexes?${query}`, { signal: ctrl.signal })
+      .then((r) => setState({ key, data: r.hexes, source: r.source, error: null }))
       .catch((err) => {
-        if (!isAbort(err)) setState({ type, data: null, source: null, error: (err as Error).message });
+        if (isAbort(err)) return;
+        setState({ key, data: null, source: null, error: (err as Error).message });
+        if (isCustom && (!(err instanceof HttpError) || err.status >= 500)) onUnavailableRef.current?.();
       });
     return () => ctrl.abort();
-  }, [type, attempt]);
+  }, [key, query, isCustom, attempt]);
 
   const retry = useCallback(() => {
-    setState((s) => ({ ...s, type: null, error: null }));
+    setState((s) => ({ ...s, key: null, error: null }));
     setAttempt((n) => n + 1);
   }, []);
 
-  const current = state.type === type;
+  const current = state.key === key;
   return {
     data: current ? state.data : null,
     source: current ? state.source : null,

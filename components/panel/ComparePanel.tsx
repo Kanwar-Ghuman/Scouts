@@ -5,15 +5,14 @@ import { Button } from "@/components/ui/button";
 import { LlmText } from "@/components/panel/LlmText";
 import { SectionLabel } from "@/components/panel/SectionLabel";
 import { useCompare } from "@/hooks/useCompare";
-import type { BusinessTypeKey } from "@/lib/businessTypes";
 import { pickWinner } from "@/lib/model";
 import { cn } from "@/lib/utils";
-import type { ModelWeights, ScoredHex } from "@/types";
+import type { Business, ModelWeights, ScoredHex } from "@/types";
 
 interface Props {
   a: ScoredHex;
   b: ScoredHex;
-  type: BusinessTypeKey;
+  business: Business;
   weights: ModelWeights;
   onSwap: () => void;
   onClose: () => void;
@@ -32,11 +31,11 @@ const ROWS: { label: string; get: (h: ScoredHex) => number; lowerIsBetter?: bool
   { label: "Demand", get: (h) => h.demand, fmt: (n) => (Number.isInteger(n) ? String(n) : n.toFixed(1)) },
 ];
 
-export function ComparePanel({ a, b, type, weights, onSwap, onClose }: Props) {
+export function ComparePanel({ a, b, business, weights, onSwap, onClose }: Props) {
   const winner = pickWinner(a, b);
   const winnerLabel = winner.h3 === a.h3 ? "A" : "B";
   const loser = winner === a ? b : a;
-  const { data, loading, error, retry } = useCompare(a.h3, b.h3, type, weights);
+  const { data, loading, error, retry } = useCompare(a.h3, b.h3, business, weights);
   // The explanation must match the model's current pick; hide a stale one while the refetch is pending.
   const text = data && data.winner === winner.h3 ? data.explanation : null;
 
