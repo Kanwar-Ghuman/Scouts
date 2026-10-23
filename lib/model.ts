@@ -106,6 +106,13 @@ export function explainScore(h: ScoredHex, w: ModelWeights, total: number): stri
   ];
 }
 
+/** Each group's share of demand (weight × count), largest first. */
+export function contributions(h: HexFeatures, w: ModelWeights): { key: DriverGroup; label: string; value: number }[] {
+  return DRIVER_GROUPS
+    .map((g) => ({ key: g.key, label: g.label, value: w[g.key] * h[g.key] }))
+    .sort((a, b) => b.value - a.value);
+}
+
 /** The model, not the LLM, picks the winner. */
 export function pickWinner(a: ScoredHex, b: ScoredHex): ScoredHex {
   if (a.raw !== b.raw) return a.raw > b.raw ? a : b;

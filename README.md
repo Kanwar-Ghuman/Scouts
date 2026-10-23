@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Site Scout
 
-## Getting Started
+![Site Scout](public/sitescout_twotone.svg)
 
-First, run the development server:
+A location decision model for small businesses in the Pomona, CA area. The LLM generates. The model decides. The LLM explains.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## What it does
+- Describe your business in plain English. An open-weight LLM turns it into model settings.
+- A transparent decision model scores every ~0.7 sq km area within 12 km of Cal Poly Pomona. Sliders let you change what matters and the map rescores instantly.
+- Click a spot to see the exact math, nearby demand and the nearest competitors, plus a plain-English explanation.
+- Compare two spots: the model picks, the LLM explains the tradeoff.
+- Search a place you know and download a one-page report for a landlord or lender.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## The decision model
+- demand = Σ weight × count, for students, workers, residents and shoppers
+- raw = demand / (1 + competition weight × competitors)
+- score = percentile of raw among nearby areas (0 to 100)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The model is deterministic and runs in the browser (`lib/model.ts`). The server recomputes scores itself before calling the LLM. The LLM never picks a winner.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Architecture
+Overture places → Snowflake (`PLACES` → `HEX_FEATURES` with H3) → Next.js API → `lib/model.ts` scores in the browser → Llama 3.3 70B via Cortex `AI_COMPLETE` for plain-English input and explanations → Neon Postgres cache (Prisma).
 
-## Learn More
+Reliability: the app falls back to exported data in `data/` if Snowflake is unreachable, retries dropped connections, rate-limits LLM routes, and caches every LLM result.
 
-To learn more about Next.js, take a look at the following resources:
+## Run locally
+1. Use Node 20.19+, 22.12+ or 24+ (Prisma's requirement).
+2. `npm install` (also generates the Prisma client and copies the MapLibre worker into `public/`)
+3. Create `.env.local` with the names in `instructions/02-setup.md`, plus `DATABASE_URL` (pooled) and `DATABASE_URL_UNPOOLED` (direct) from Neon.
+4. Create the cache table: `npm run db:migrate`. On networks that block port 5432, use `npm run db:migrate:https`.
+5. `npm run dev` (set `MOCK_MODE=true` to run without Snowflake or Postgres)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Logo files
+In `public/`: `sitescout_twotone.svg` (original, dark background), `sitescout_wordmark_light.svg` (for white surfaces), `sitescout_wordmark_dark.svg` (transparent, for dark surfaces), `sitescout_mark.svg` (hex-pin icon) and `sitescout_mark_twotone.svg` (favicon, also `app/icon.svg`).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Built with
+Snowflake (Marketplace, H3, Cortex), CoCo, Llama 3.3 70B, Next.js, TypeScript, Tailwind CSS, shadcn/ui, Base UI, deck.gl, MapLibre GL, react-map-gl, h3-js, lucide-react, sonner, cmdk, Neon Postgres, Prisma (`@prisma/client`, `@prisma/adapter-neon`), dotenv, Vercel.
 
-## Deploy on Vercel
+## Data and attribution
+Places: Overture Maps Foundation. Basemap: © CARTO, © OpenStreetMap contributors.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+MIT
